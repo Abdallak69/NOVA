@@ -1,0 +1,105 @@
+2025-04-04 18:43:00,123 - quantum_hardware.general - DEBUG - Started operation: run_circuit_Cirq Simulator
+2025-04-04 18:43:00,123 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,123 - quantum_hardware.general - DEBUG - Circuit execution details: {"backend": "Cirq Simulator", "n_qubits": 2, "circuit_depth": 7, "shots": 1000, "success": false, "execution_time": 6.604194641113281e-05, "error_data": {"message": "'NoneType' object has no attribute 'get'", "type": "AttributeError"}}
+2025-04-04 18:43:00,123 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0004s
+2025-04-04 18:43:00,123 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "error": "'NoneType' object has no attribute 'get'", "execution_time": 6.604194641113281e-05, "backend": "Cirq Simulator", "circuit_qubits": 2, "circuit_depth": 7, "repetitions": 1000, "error_mitigation": null}
+2025-04-04 18:43:00,123 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,123 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,123 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "unknown_error", "message": "'NoneType' object has no attribute 'get'", "timestamp": "2025-04-04T18:43:00.123639", "exception": "'NoneType' object has no attribute 'get'", "exception_type": "AttributeError"}
+2025-04-04 18:43:00,123 - quantum_hardware.general - DEBUG - Started operation: get_statevector_Cirq Simulator
+2025-04-04 18:43:00,125 - quantum_hardware.general - INFO - Completed operation: get_statevector_Cirq Simulator in 0.0017s
+2025-04-04 18:43:00,125 - quantum_hardware.general - DEBUG - Operation metadata: {"success": true, "execution_time": 0.0016210079193115234, "backend": "Cirq Simulator", "circuit_qubits": 2, "circuit_depth": 7}
+2025-04-04 18:43:00,125 - quantum_hardware.general - DEBUG - Started operation: get_device_properties_Cirq Simulator
+2025-04-04 18:43:00,125 - quantum_hardware.general - INFO - Completed operation: get_device_properties_Cirq Simulator in 0.0001s
+2025-04-04 18:43:00,125 - quantum_hardware.general - DEBUG - Operation metadata: {"success": true}
+2025-04-04 18:43:00,126 - quantum_hardware.general - DEBUG - Started operation: calibrate_Enhanced Readout Error
+2025-04-04 18:43:00,126 - quantum_hardware.general - ERROR - Calibration standard_readout failed on Cirq Simulator
+2025-04-04 18:43:00,126 - quantum_hardware.general - DEBUG - Calibration details: {"backend": "Cirq Simulator", "calibration_type": "standard_readout", "qubits": [0, 1, 2, 3, 4], "success": false, "timestamp": "2025-04-04T18:43:00.126408", "metrics": {"n_qubits": 5, "shots": 100}}
+2025-04-04 18:43:00,126 - quantum_hardware.general - DEBUG - Started operation: run_circuit_Cirq Simulator
+2025-04-04 18:43:00,126 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,126 - quantum_hardware.general - DEBUG - Circuit execution details: {"backend": "Cirq Simulator", "n_qubits": 5, "circuit_depth": 1, "shots": 100, "success": false, "execution_time": 1.0967254638671875e-05, "error_data": {"message": "'NoneType' object has no attribute 'get'", "type": "AttributeError"}}
+2025-04-04 18:43:00,126 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0001s
+2025-04-04 18:43:00,126 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "error": "'NoneType' object has no attribute 'get'", "execution_time": 1.0967254638671875e-05, "backend": "Cirq Simulator", "circuit_qubits": 5, "circuit_depth": 1, "repetitions": 100, "error_mitigation": null}
+2025-04-04 18:43:00,126 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,126 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,126 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "unknown_error", "message": "'NoneType' object has no attribute 'get'", "timestamp": "2025-04-04T18:43:00.126731", "exception": "'NoneType' object has no attribute 'get'", "exception_type": "AttributeError"}
+2025-04-04 18:43:00,126 - quantum_hardware.general - ERROR - Calibration standard_readout failed on Cirq Simulator
+2025-04-04 18:43:00,126 - quantum_hardware.general - DEBUG - Calibration details: {"backend": "Cirq Simulator", "calibration_type": "standard_readout", "qubits": [0, 1, 2, 3, 4], "success": false, "timestamp": "2025-04-04T18:43:00.126860", "metrics": {"error": "unknown_error: 'NoneType' object has no attribute 'get' (Backend: Cirq Simulator)"}, "duration": 0.0005030632019042969}
+2025-04-04 18:43:00,126 - quantum_hardware.general - INFO - Completed operation: calibrate_Enhanced Readout Error in 0.0006s
+2025-04-04 18:43:00,127 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "duration": 0.0005030632019042969, "error": "unknown_error: 'NoneType' object has no attribute 'get' (Backend: Cirq Simulator)"}
+2025-04-04 18:43:00,127 - quantum_hardware.general - ERROR - hardware - calibration_error: Readout error calibration failed: unknown_error: 'NoneType' object has no attribute 'get' (Backend: Cirq Simulator)
+2025-04-04 18:43:00,127 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "calibration_error", "message": "Readout error calibration failed: unknown_error: 'NoneType' object has no attribute 'get' (Backend: Cirq Simulator)", "timestamp": "2025-04-04T18:43:00.127048"}
+2025-04-04 18:43:00,127 - quantum_hardware.general - DEBUG - Started operation: mitigate_Dynamical Decoupling
+2025-04-04 18:43:00,127 - quantum_hardware.general - INFO - Completed operation: mitigate_Dynamical Decoupling in 0.0001s
+2025-04-04 18:43:00,127 - quantum_hardware.general - DEBUG - Operation metadata: {"success": true, "n_qubits": 2, "sequence_type": "XY4", "original_circuit_depth": 7, "mitigated_circuit_depth": 7}
+2025-04-04 18:43:00,127 - quantum_hardware.general - DEBUG - Started operation: run_circuit_Cirq Simulator
+2025-04-04 18:43:00,127 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,127 - quantum_hardware.general - DEBUG - Circuit execution details: {"backend": "Cirq Simulator", "n_qubits": 2, "circuit_depth": 7, "shots": 1000, "success": false, "execution_time": 2.193450927734375e-05, "error_data": {"message": "'NoneType' object has no attribute 'get'", "type": "AttributeError"}}
+2025-04-04 18:43:00,127 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0001s
+2025-04-04 18:43:00,127 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "error": "'NoneType' object has no attribute 'get'", "execution_time": 2.193450927734375e-05, "backend": "Cirq Simulator", "circuit_qubits": 2, "circuit_depth": 7, "repetitions": 1000, "error_mitigation": null}
+2025-04-04 18:43:00,127 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,127 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,127 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "unknown_error", "message": "'NoneType' object has no attribute 'get'", "timestamp": "2025-04-04T18:43:00.127444", "exception": "'NoneType' object has no attribute 'get'", "exception_type": "AttributeError"}
+2025-04-04 18:43:00,127 - quantum_hardware.general - DEBUG - Started operation: mitigate_Zero Noise Extrapolation
+2025-04-04 18:43:00,127 - quantum_hardware.general - INFO - Completed operation: mitigate_Zero Noise Extrapolation in 0.0004s
+2025-04-04 18:43:00,127 - quantum_hardware.general - DEBUG - Operation metadata: {"success": true, "scale_factors": [1.0, 2.0, 3.0], "extrapolation_method": "linear", "n_circuits": 3}
+2025-04-04 18:43:00,128 - quantum_hardware.general - DEBUG - Started operation: run_circuit_Cirq Simulator
+2025-04-04 18:43:00,128 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,128 - quantum_hardware.general - DEBUG - Circuit execution details: {"backend": "Cirq Simulator", "n_qubits": 2, "circuit_depth": 7, "shots": 1000, "success": false, "execution_time": 2.09808349609375e-05, "error_data": {"message": "'NoneType' object has no attribute 'get'", "type": "AttributeError"}}
+2025-04-04 18:43:00,128 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0001s
+2025-04-04 18:43:00,128 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "error": "'NoneType' object has no attribute 'get'", "execution_time": 2.09808349609375e-05, "backend": "Cirq Simulator", "circuit_qubits": 2, "circuit_depth": 7, "repetitions": 1000, "error_mitigation": null}
+2025-04-04 18:43:00,129 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,129 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,129 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "unknown_error", "message": "'NoneType' object has no attribute 'get'", "timestamp": "2025-04-04T18:43:00.129375", "exception": "'NoneType' object has no attribute 'get'", "exception_type": "AttributeError"}
+2025-04-04 18:43:00,129 - quantum_hardware.general - DEBUG - Started operation: get_backend_cirq_simulator
+2025-04-04 18:43:00,130 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0007s
+2025-04-04 18:43:00,130 - quantum_hardware.general - DEBUG - Operation metadata: {"success": true, "backend_name": "cirq_simulator", "enhanced": true}
+2025-04-04 18:43:00,130 - quantum_hardware.general - DEBUG - Started operation: enhanced_execute_with_hardware
+2025-04-04 18:43:00,130 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,130 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,130 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0001s
+2025-04-04 18:43:00,130 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0001s
+2025-04-04 18:43:00,130 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,130 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,130 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,130 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,131 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0005s
+2025-04-04 18:43:00,131 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0005s
+2025-04-04 18:43:00,131 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0004s
+2025-04-04 18:43:00,131 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0004s
+2025-04-04 18:43:00,131 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0004s
+2025-04-04 18:43:00,131 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,131 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,131 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,131 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0001s
+2025-04-04 18:43:00,131 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0001s
+2025-04-04 18:43:00,131 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0001s
+2025-04-04 18:43:00,131 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,131 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,131 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,131 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,131 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,131 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,131 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0008s
+2025-04-04 18:43:00,131 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0008s
+2025-04-04 18:43:00,131 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0008s
+2025-04-04 18:43:00,132 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,132 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,132 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,132 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,132 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0001s
+2025-04-04 18:43:00,132 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0001s
+2025-04-04 18:43:00,132 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0001s
+2025-04-04 18:43:00,132 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0001s
+2025-04-04 18:43:00,132 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,132 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,132 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,132 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,133 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,133 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,133 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,133 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-04-04 18:43:00,133 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0004s
+2025-04-04 18:43:00,133 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0004s
+2025-04-04 18:43:00,133 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0004s
+2025-04-04 18:43:00,133 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0004s

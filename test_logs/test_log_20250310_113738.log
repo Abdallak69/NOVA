@@ -1,0 +1,79 @@
+2025-03-10 11:37:38,662 - quantum_hardware.general - DEBUG - Started operation: run_circuit_Cirq Simulator
+2025-03-10 11:37:38,662 - quantum_hardware.general - ERROR - hardware - unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement
+2025-03-10 11:37:38,662 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "unknown_error", "message": "Circuit validation failed: Circuit uses unsupported gates: Measurement", "timestamp": "2025-03-10T11:37:38.662499"}
+2025-03-10 11:37:38,662 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement
+2025-03-10 11:37:38,662 - quantum_hardware.general - DEBUG - Circuit execution details: {"backend": "Cirq Simulator", "n_qubits": 2, "circuit_depth": 7, "shots": 1000, "success": false, "execution_time": 0.00018477439880371094, "error_data": {"message": "unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement", "type": "QuantumHardwareError"}}
+2025-03-10 11:37:38,662 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0004s
+2025-03-10 11:37:38,662 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "error": "unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement", "execution_time": 0.00018477439880371094, "backend": "Cirq Simulator", "circuit_qubits": 2, "circuit_depth": 7, "repetitions": 1000, "error_mitigation": null}
+2025-03-10 11:37:38,662 - quantum_hardware.general - DEBUG - Started operation: get_statevector_Cirq Simulator
+2025-03-10 11:37:38,662 - quantum_hardware.general - ERROR - hardware - unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement
+2025-03-10 11:37:38,662 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "unknown_error", "message": "Circuit validation failed: Circuit uses unsupported gates: Measurement", "timestamp": "2025-03-10T11:37:38.662882"}
+2025-03-10 11:37:38,662 - quantum_hardware.general - INFO - Completed operation: get_statevector_Cirq Simulator in 0.0002s
+2025-03-10 11:37:38,663 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "error": "unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement", "execution_time": 0.00010418891906738281, "backend": "Cirq Simulator", "circuit_qubits": 2, "circuit_depth": 7}
+2025-03-10 11:37:38,663 - quantum_hardware.general - DEBUG - Started operation: get_device_properties_Cirq Simulator
+2025-03-10 11:37:38,663 - quantum_hardware.general - INFO - Completed operation: get_device_properties_Cirq Simulator in 0.0004s
+2025-03-10 11:37:38,663 - quantum_hardware.general - DEBUG - Operation metadata: {"success": true}
+2025-03-10 11:37:38,664 - quantum_hardware.general - DEBUG - Started operation: calibrate_Enhanced Readout Error
+2025-03-10 11:37:38,664 - quantum_hardware.general - ERROR - Calibration standard_readout failed on Cirq Simulator
+2025-03-10 11:37:38,664 - quantum_hardware.general - DEBUG - Calibration details: {"backend": "Cirq Simulator", "calibration_type": "standard_readout", "qubits": [0, 1, 2, 3, 4], "success": false, "timestamp": "2025-03-10T11:37:38.664373", "metrics": {"n_qubits": 5, "shots": 100}}
+2025-03-10 11:37:38,664 - quantum_hardware.general - DEBUG - Started operation: run_circuit_Cirq Simulator
+2025-03-10 11:37:38,664 - quantum_hardware.general - ERROR - hardware - unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement
+2025-03-10 11:37:38,664 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "unknown_error", "message": "Circuit validation failed: Circuit uses unsupported gates: Measurement", "timestamp": "2025-03-10T11:37:38.664630"}
+2025-03-10 11:37:38,664 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement
+2025-03-10 11:37:38,664 - quantum_hardware.general - DEBUG - Circuit execution details: {"backend": "Cirq Simulator", "n_qubits": 5, "circuit_depth": 1, "shots": 100, "success": false, "execution_time": 9.584426879882812e-05, "error_data": {"message": "unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement", "type": "QuantumHardwareError"}}
+2025-03-10 11:37:38,664 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0002s
+2025-03-10 11:37:38,664 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "error": "unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement", "execution_time": 9.584426879882812e-05, "backend": "Cirq Simulator", "circuit_qubits": 5, "circuit_depth": 1, "repetitions": 100, "error_mitigation": null}
+2025-03-10 11:37:38,664 - quantum_hardware.general - ERROR - Calibration standard_readout failed on Cirq Simulator
+2025-03-10 11:37:38,664 - quantum_hardware.general - DEBUG - Calibration details: {"backend": "Cirq Simulator", "calibration_type": "standard_readout", "qubits": [0, 1, 2, 3, 4], "success": false, "timestamp": "2025-03-10T11:37:38.664885", "metrics": {"error": "unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement"}, "duration": 0.0006899833679199219}
+2025-03-10 11:37:38,664 - quantum_hardware.general - INFO - Completed operation: calibrate_Enhanced Readout Error in 0.0008s
+2025-03-10 11:37:38,664 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "duration": 0.0006899833679199219, "error": "unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement"}
+2025-03-10 11:37:38,665 - quantum_hardware.general - ERROR - hardware - calibration_error: Readout error calibration failed: unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement
+2025-03-10 11:37:38,665 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "calibration_error", "message": "Readout error calibration failed: unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement", "timestamp": "2025-03-10T11:37:38.665024"}
+2025-03-10 11:37:38,665 - quantum_hardware.general - DEBUG - Started operation: mitigate_Dynamical Decoupling
+2025-03-10 11:37:38,665 - quantum_hardware.general - INFO - Completed operation: mitigate_Dynamical Decoupling in 0.0001s
+2025-03-10 11:37:38,665 - quantum_hardware.general - DEBUG - Operation metadata: {"success": true, "n_qubits": 2, "sequence_type": "XY4", "original_circuit_depth": 7, "mitigated_circuit_depth": 7}
+2025-03-10 11:37:38,665 - quantum_hardware.general - DEBUG - Started operation: run_circuit_Cirq Simulator
+2025-03-10 11:37:38,665 - quantum_hardware.general - ERROR - hardware - unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement
+2025-03-10 11:37:38,665 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "unknown_error", "message": "Circuit validation failed: Circuit uses unsupported gates: Measurement", "timestamp": "2025-03-10T11:37:38.665332"}
+2025-03-10 11:37:38,665 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement
+2025-03-10 11:37:38,665 - quantum_hardware.general - DEBUG - Circuit execution details: {"backend": "Cirq Simulator", "n_qubits": 2, "circuit_depth": 7, "shots": 1000, "success": false, "execution_time": 8.893013000488281e-05, "error_data": {"message": "unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement", "type": "QuantumHardwareError"}}
+2025-03-10 11:37:38,665 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0002s
+2025-03-10 11:37:38,665 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "error": "unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement", "execution_time": 8.893013000488281e-05, "backend": "Cirq Simulator", "circuit_qubits": 2, "circuit_depth": 7, "repetitions": 1000, "error_mitigation": null}
+2025-03-10 11:37:38,665 - quantum_hardware.general - DEBUG - Started operation: mitigate_Zero Noise Extrapolation
+2025-03-10 11:37:38,666 - quantum_hardware.general - INFO - Completed operation: mitigate_Zero Noise Extrapolation in 0.0009s
+2025-03-10 11:37:38,666 - quantum_hardware.general - DEBUG - Operation metadata: {"success": true, "scale_factors": [1.0, 2.0, 3.0], "extrapolation_method": "linear", "n_circuits": 3}
+2025-03-10 11:37:38,666 - quantum_hardware.general - DEBUG - Started operation: run_circuit_Cirq Simulator
+2025-03-10 11:37:38,666 - quantum_hardware.general - ERROR - hardware - unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement
+2025-03-10 11:37:38,666 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "unknown_error", "message": "Circuit validation failed: Circuit uses unsupported gates: Measurement", "timestamp": "2025-03-10T11:37:38.666658"}
+2025-03-10 11:37:38,666 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement
+2025-03-10 11:37:38,666 - quantum_hardware.general - DEBUG - Circuit execution details: {"backend": "Cirq Simulator", "n_qubits": 2, "circuit_depth": 7, "shots": 1000, "success": false, "execution_time": 9.703636169433594e-05, "error_data": {"message": "unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement", "type": "QuantumHardwareError"}}
+2025-03-10 11:37:38,666 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0002s
+2025-03-10 11:37:38,666 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "error": "unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement", "execution_time": 9.703636169433594e-05, "backend": "Cirq Simulator", "circuit_qubits": 2, "circuit_depth": 7, "repetitions": 1000, "error_mitigation": null}
+2025-03-10 11:37:38,667 - quantum_hardware.general - DEBUG - Started operation: get_backend_cirq_simulator
+2025-03-10 11:37:38,667 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0006s
+2025-03-10 11:37:38,667 - quantum_hardware.general - DEBUG - Operation metadata: {"success": true, "backend_name": "cirq_simulator", "enhanced": true}
+2025-03-10 11:37:38,667 - quantum_hardware.general - DEBUG - Started operation: enhanced_execute_with_hardware
+2025-03-10 11:37:38,667 - quantum_hardware.general - ERROR - hardware - unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement
+2025-03-10 11:37:38,668 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement
+2025-03-10 11:37:38,668 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0001s
+2025-03-10 11:37:38,668 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0004s
+2025-03-10 11:37:38,668 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0003s
+2025-03-10 11:37:38,668 - quantum_hardware.general - ERROR - hardware - unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement
+2025-03-10 11:37:38,668 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: unknown_error: Circuit validation failed: Circuit uses unsupported gates: Measurement
+2025-03-10 11:37:38,668 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0001s
+2025-03-10 11:37:38,668 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0007s
+2025-03-10 11:37:38,669 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: 'NoneType' object has no attribute 'get'
+2025-03-10 11:37:38,669 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0001s
+2025-03-10 11:37:38,669 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-03-10 11:37:38,669 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-03-10 11:37:38,669 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0003s
+2025-03-10 11:37:38,670 - quantum_hardware.general - ERROR - hardware - unknown_error: Circuit validation failed: Empty circuit
+2025-03-10 11:37:38,670 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: unknown_error: Circuit validation failed: Empty circuit
+2025-03-10 11:37:38,670 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0001s
+2025-03-10 11:37:38,670 - quantum_hardware.general - ERROR - hardware - unknown_error: Circuit validation failed: Circuit uses unsupported gates: CNOT, Measurement
+2025-03-10 11:37:38,670 - quantum_hardware.general - ERROR - Circuit execution failed on Cirq Simulator: unknown_error: Circuit validation failed: Circuit uses unsupported gates: CNOT, Measurement
+2025-03-10 11:37:38,670 - quantum_hardware.general - INFO - Completed operation: run_circuit_Cirq Simulator in 0.0002s
+2025-03-10 11:37:38,670 - quantum_hardware.general - ERROR - hardware - unknown_error: Backend Failing Backend is not available: error
+2025-03-10 11:37:38,670 - quantum_hardware.general - ERROR - Circuit execution failed on Failing Backend: unknown_error: Backend Failing Backend is not available: error
+2025-03-10 11:37:38,670 - quantum_hardware.general - INFO - Completed operation: run_circuit_Failing Backend in 0.0001s
+2025-03-10 11:37:38,670 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0003s

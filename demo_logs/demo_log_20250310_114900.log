@@ -1,0 +1,67 @@
+2025-03-10 11:49:00,343 - quantum_hardware.general - DEBUG - Started operation: run_circuit_Mock Simulator
+2025-03-10 11:49:00,343 - quantum_hardware.general - ERROR - Circuit execution failed on Mock Simulator: 'NoneType' object has no attribute 'get'
+2025-03-10 11:49:00,343 - quantum_hardware.general - DEBUG - Circuit execution details: {"backend": "Mock Simulator", "n_qubits": 2, "circuit_depth": 3, "shots": 1000, "success": false, "execution_time": 4.8160552978515625e-05, "error_data": {"message": "'NoneType' object has no attribute 'get'", "type": "AttributeError"}}
+2025-03-10 11:49:00,343 - quantum_hardware.general - INFO - Completed operation: run_circuit_Mock Simulator in 0.0004s
+2025-03-10 11:49:00,344 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "error": "'NoneType' object has no attribute 'get'", "execution_time": 4.8160552978515625e-05, "backend": "Mock Simulator", "circuit_qubits": 2, "circuit_depth": 3, "repetitions": 1000, "error_mitigation": null}
+2025-03-10 11:49:00,344 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-03-10 11:49:00,344 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-03-10 11:49:00,344 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "unknown_error", "message": "'NoneType' object has no attribute 'get'", "timestamp": "2025-03-10T11:49:00.344069", "exception": "'NoneType' object has no attribute 'get'", "exception_type": "AttributeError"}
+2025-03-10 11:49:00,344 - quantum_hardware.general - DEBUG - Started operation: get_statevector_Mock Simulator
+2025-03-10 11:49:00,344 - quantum_hardware.general - INFO - Completed operation: get_statevector_Mock Simulator in 0.0008s
+2025-03-10 11:49:00,345 - quantum_hardware.general - DEBUG - Operation metadata: {"success": true, "execution_time": 0.0007538795471191406, "backend": "Mock Simulator", "circuit_qubits": 2, "circuit_depth": 3}
+2025-03-10 11:49:00,345 - quantum_hardware.general - DEBUG - Started operation: calibrate_Enhanced Readout Error
+2025-03-10 11:49:00,345 - quantum_hardware.general - ERROR - Calibration standard_readout failed on Readout Calibration Mock
+2025-03-10 11:49:00,345 - quantum_hardware.general - DEBUG - Calibration details: {"backend": "Readout Calibration Mock", "calibration_type": "standard_readout", "qubits": [0, 1], "success": false, "timestamp": "2025-03-10T11:49:00.345869", "metrics": {"n_qubits": 2, "shots": 100}}
+2025-03-10 11:49:00,345 - quantum_hardware.general - DEBUG - Started operation: run_circuit_Readout Calibration Mock
+2025-03-10 11:49:00,346 - quantum_hardware.general - ERROR - Circuit execution failed on Readout Calibration Mock: 'NoneType' object has no attribute 'get'
+2025-03-10 11:49:00,346 - quantum_hardware.general - DEBUG - Circuit execution details: {"backend": "Readout Calibration Mock", "n_qubits": 2, "circuit_depth": 1, "shots": 100, "success": false, "execution_time": 1.1920928955078125e-05, "error_data": {"message": "'NoneType' object has no attribute 'get'", "type": "AttributeError"}}
+2025-03-10 11:49:00,346 - quantum_hardware.general - INFO - Completed operation: run_circuit_Readout Calibration Mock in 0.0001s
+2025-03-10 11:49:00,346 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "error": "'NoneType' object has no attribute 'get'", "execution_time": 1.1920928955078125e-05, "backend": "Readout Calibration Mock", "circuit_qubits": 2, "circuit_depth": 1, "repetitions": 100, "error_mitigation": null}
+2025-03-10 11:49:00,346 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-03-10 11:49:00,346 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-03-10 11:49:00,346 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "unknown_error", "message": "'NoneType' object has no attribute 'get'", "timestamp": "2025-03-10T11:49:00.346175", "exception": "'NoneType' object has no attribute 'get'", "exception_type": "AttributeError"}
+2025-03-10 11:49:00,346 - quantum_hardware.general - ERROR - Calibration standard_readout failed on Readout Calibration Mock
+2025-03-10 11:49:00,346 - quantum_hardware.general - DEBUG - Calibration details: {"backend": "Readout Calibration Mock", "calibration_type": "standard_readout", "qubits": [0, 1], "success": false, "timestamp": "2025-03-10T11:49:00.346287", "metrics": {"error": "unknown_error: 'NoneType' object has no attribute 'get' (Backend: Readout Calibration Mock)"}, "duration": 0.0004832744598388672}
+2025-03-10 11:49:00,346 - quantum_hardware.general - INFO - Completed operation: calibrate_Enhanced Readout Error in 0.0006s
+2025-03-10 11:49:00,346 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "duration": 0.0004832744598388672, "error": "unknown_error: 'NoneType' object has no attribute 'get' (Backend: Readout Calibration Mock)"}
+2025-03-10 11:49:00,346 - quantum_hardware.general - ERROR - hardware - calibration_error: Readout error calibration failed: unknown_error: 'NoneType' object has no attribute 'get' (Backend: Readout Calibration Mock)
+2025-03-10 11:49:00,346 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "calibration_error", "message": "Readout error calibration failed: unknown_error: 'NoneType' object has no attribute 'get' (Backend: Readout Calibration Mock)", "timestamp": "2025-03-10T11:49:00.346420"}
+2025-03-10 11:49:00,346 - quantum_hardware.general - DEBUG - Started operation: mitigate_Dynamical Decoupling
+2025-03-10 11:49:00,346 - quantum_hardware.general - INFO - Completed operation: mitigate_Dynamical Decoupling in 0.0001s
+2025-03-10 11:49:00,346 - quantum_hardware.general - DEBUG - Operation metadata: {"success": true, "n_qubits": 2, "sequence_type": "XY4", "original_circuit_depth": 3, "mitigated_circuit_depth": 3}
+2025-03-10 11:49:00,346 - quantum_hardware.general - DEBUG - Started operation: run_circuit_Mock Simulator
+2025-03-10 11:49:00,347 - quantum_hardware.general - ERROR - Circuit execution failed on Mock Simulator: 'NoneType' object has no attribute 'get'
+2025-03-10 11:49:00,347 - quantum_hardware.general - DEBUG - Circuit execution details: {"backend": "Mock Simulator", "n_qubits": 2, "circuit_depth": 3, "shots": 1000, "success": false, "execution_time": 1.3828277587890625e-05, "error_data": {"message": "'NoneType' object has no attribute 'get'", "type": "AttributeError"}}
+2025-03-10 11:49:00,347 - quantum_hardware.general - INFO - Completed operation: run_circuit_Mock Simulator in 0.0001s
+2025-03-10 11:49:00,347 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "error": "'NoneType' object has no attribute 'get'", "execution_time": 1.3828277587890625e-05, "backend": "Mock Simulator", "circuit_qubits": 2, "circuit_depth": 3, "repetitions": 1000, "error_mitigation": null}
+2025-03-10 11:49:00,347 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-03-10 11:49:00,347 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-03-10 11:49:00,347 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "unknown_error", "message": "'NoneType' object has no attribute 'get'", "timestamp": "2025-03-10T11:49:00.347329", "exception": "'NoneType' object has no attribute 'get'", "exception_type": "AttributeError"}
+2025-03-10 11:49:00,347 - quantum_hardware.general - DEBUG - Started operation: mitigate_Zero Noise Extrapolation
+2025-03-10 11:49:00,347 - quantum_hardware.general - INFO - Completed operation: mitigate_Zero Noise Extrapolation in 0.0002s
+2025-03-10 11:49:00,347 - quantum_hardware.general - DEBUG - Operation metadata: {"success": true, "scale_factors": [1.0, 2.0, 3.0], "extrapolation_method": "linear", "n_circuits": 3}
+2025-03-10 11:49:00,347 - quantum_hardware.general - DEBUG - Started operation: run_circuit_Mock Simulator
+2025-03-10 11:49:00,347 - quantum_hardware.general - ERROR - Circuit execution failed on Mock Simulator: 'NoneType' object has no attribute 'get'
+2025-03-10 11:49:00,347 - quantum_hardware.general - DEBUG - Circuit execution details: {"backend": "Mock Simulator", "n_qubits": 2, "circuit_depth": 3, "shots": 1000, "success": false, "execution_time": 2.09808349609375e-05, "error_data": {"message": "'NoneType' object has no attribute 'get'", "type": "AttributeError"}}
+2025-03-10 11:49:00,348 - quantum_hardware.general - INFO - Completed operation: run_circuit_Mock Simulator in 0.0002s
+2025-03-10 11:49:00,348 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "error": "'NoneType' object has no attribute 'get'", "execution_time": 2.09808349609375e-05, "backend": "Mock Simulator", "circuit_qubits": 2, "circuit_depth": 3, "repetitions": 1000, "error_mitigation": null}
+2025-03-10 11:49:00,348 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-03-10 11:49:00,348 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-03-10 11:49:00,348 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "unknown_error", "message": "'NoneType' object has no attribute 'get'", "timestamp": "2025-03-10T11:49:00.348078", "exception": "'NoneType' object has no attribute 'get'", "exception_type": "AttributeError"}
+2025-03-10 11:49:00,348 - quantum_hardware.general - DEBUG - Started operation: run_circuit_Mock Simulator
+2025-03-10 11:49:00,348 - quantum_hardware.general - ERROR - Circuit execution failed on Mock Simulator: 'NoneType' object has no attribute 'get'
+2025-03-10 11:49:00,348 - quantum_hardware.general - DEBUG - Circuit execution details: {"backend": "Mock Simulator", "n_qubits": 3, "circuit_depth": 2, "shots": 1000, "success": false, "execution_time": 1.2159347534179688e-05, "error_data": {"message": "'NoneType' object has no attribute 'get'", "type": "AttributeError"}}
+2025-03-10 11:49:00,348 - quantum_hardware.general - INFO - Completed operation: run_circuit_Mock Simulator in 0.0001s
+2025-03-10 11:49:00,348 - quantum_hardware.general - DEBUG - Operation metadata: {"success": false, "error": "'NoneType' object has no attribute 'get'", "execution_time": 1.2159347534179688e-05, "backend": "Mock Simulator", "circuit_qubits": 3, "circuit_depth": 2, "repetitions": 1000, "error_mitigation": null}
+2025-03-10 11:49:00,349 - quantum_hardware.general - ERROR - hardware - unknown_error: 'NoneType' object has no attribute 'get'
+2025-03-10 11:49:00,349 - quantum_hardware.general - ERROR - Exception details: 'NoneType' object has no attribute 'get'
+2025-03-10 11:49:00,349 - quantum_hardware.general - DEBUG - Error details: {"component": "hardware", "error_type": "unknown_error", "message": "'NoneType' object has no attribute 'get'", "timestamp": "2025-03-10T11:49:00.349028", "exception": "'NoneType' object has no attribute 'get'", "exception_type": "AttributeError"}
+2025-03-10 11:49:00,349 - quantum_hardware.general - DEBUG - Started operation: enhanced_execute_with_hardware
+2025-03-10 11:49:00,349 - quantum_hardware.general - ERROR - hardware - unknown_error: Backend Mock Failing Backend is not available: error
+2025-03-10 11:49:00,349 - quantum_hardware.general - ERROR - Circuit execution failed on Mock Failing Backend: unknown_error: Backend Mock Failing Backend is not available: error
+2025-03-10 11:49:00,349 - quantum_hardware.general - INFO - Completed operation: run_circuit_Mock Failing Backend in 0.0001s
+2025-03-10 11:49:00,349 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0004s
+2025-03-10 11:49:00,349 - quantum_hardware.general - INFO - Completed operation: get_backend_mock in 0.0000s
+2025-03-10 11:49:00,349 - quantum_hardware.general - ERROR - hardware - validation_error: Unknown backend: mock
+2025-03-10 11:49:00,349 - quantum_hardware.general - ERROR - Exception details: Unknown backend: mock
+2025-03-10 11:49:00,350 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0003s

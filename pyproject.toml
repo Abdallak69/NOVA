@@ -1,0 +1,50 @@
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+extend-exclude = [
+    "__pycache__",
+    "*.egg-info",
+    ".git",
+    ".pytest_cache",
+    "benchmark_results*",
+    "demo_logs",
+    "test_logs",
+    "qnn_env",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "UP", # pyupgrade
+]
+ignore = [
+    "E501",  # line too long, handled by line-length
+    "B008",  # do not perform function calls in argument defaults
+    "B904",  # raise-without-from-inside-except
+    "UP007", # Use X | Y for type annotations
+]
+
+[tool.ruff.lint.per-file-ignores]
+"test_*.py" = ["B011"]  # assert-false
+"*test*.py" = ["B011"]
+"minimal_test.py" = ["B011"]
+"basic_qnn_test.py" = ["B011"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["qnn_molecular_energy", "ansatz_circuits", "quantum_hardware"]
+
+[tool.pytest.ini_options]
+testpaths = [".", "tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+filterwarnings = [
+    "ignore::DeprecationWarning:qiskit.*",
+    "ignore::PendingDeprecationWarning:qiskit.*",
+] 

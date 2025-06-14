@@ -1,0 +1,2 @@
+2025-04-14 10:25:59,422 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0070s
+2025-04-14 10:27:45,407 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0000s

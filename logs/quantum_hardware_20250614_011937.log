@@ -1,0 +1,13 @@
+2025-06-14 01:19:38,132 - quantum_hardware.general - INFO - Registered backend: cirq_simulator
+2025-06-14 01:19:38,165 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0047s
+2025-06-14 01:19:38,165 - quantum_hardware.general - INFO - Completed operation: get_device_properties_cirq_simulator in 0.0006s
+2025-06-14 01:19:38,169 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0000s
+2025-06-14 01:19:38,170 - quantum_hardware.general - INFO - Completed operation: get_device_properties_cirq_simulator in 0.0007s
+2025-06-14 01:19:38,175 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0000s
+2025-06-14 01:19:38,175 - quantum_hardware.general - INFO - Completed operation: get_device_properties_cirq_simulator in 0.0005s
+2025-06-14 01:19:38,181 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0000s
+2025-06-14 01:19:38,182 - quantum_hardware.general - INFO - Completed operation: get_device_properties_cirq_simulator in 0.0004s
+2025-06-14 01:19:38,187 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0000s
+2025-06-14 01:19:38,188 - quantum_hardware.general - INFO - Completed operation: get_device_properties_cirq_simulator in 0.0004s
+2025-06-14 01:19:38,193 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0000s
+2025-06-14 01:19:38,193 - quantum_hardware.general - INFO - Completed operation: get_device_properties_cirq_simulator in 0.0003s

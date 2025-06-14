@@ -1,0 +1,134 @@
+2025-06-13 13:01:49,241 - quantum_hardware.general - INFO - Registered backend: cirq_simulator
+2025-06-13 23:48:58,268 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0053s
+2025-06-13 23:48:58,269 - quantum_hardware.general - INFO - Executing circuit on backend: cirq_simulator, Qubits: 2, Depth: 3, Reps: 1000
+2025-06-13 23:48:58,271 - quantum_hardware.general - INFO - Circuit execution successful on cirq_simulator: 2 qubits, 3 depth, 1000 shots, 0.0014s
+2025-06-13 23:48:58,271 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0014s
+2025-06-13 23:48:58,271 - quantum_hardware.general - WARNING - Operation run_circuit returned unsuccessful result with status unknown
+2025-06-13 23:48:58,345 - quantum_hardware.general - INFO - Registered backend: noisy_cirq_simulator
+2025-06-13 23:48:58,346 - quantum_hardware.general - INFO - Completed operation: get_backend_noisy_cirq_simulator in 0.0008s
+2025-06-13 23:48:58,346 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0000s
+2025-06-13 23:48:58,346 - quantum_hardware.general - INFO - Executing circuit on backend: cirq_simulator, Qubits: 2, Depth: 3, Reps: 1000
+2025-06-13 23:48:58,347 - quantum_hardware.general - INFO - Circuit execution successful on cirq_simulator: 2 qubits, 3 depth, 1000 shots, 0.0013s
+2025-06-13 23:48:58,347 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0014s
+2025-06-13 23:48:58,347 - quantum_hardware.general - WARNING - Operation run_circuit returned unsuccessful result with status unknown
+2025-06-13 23:48:58,347 - quantum_hardware.general - ERROR - hardware - unknown_error: Backend cirq_simulator is not available: error
+2025-06-13 23:48:58,347 - quantum_hardware.general - ERROR - Circuit execution failed on cirq_simulator: unknown_error: Backend cirq_simulator is not available: error
+2025-06-13 23:48:58,347 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0001s
+2025-06-13 23:48:58,348 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0000s
+2025-06-13 23:48:58,348 - quantum_hardware.general - INFO - Completed operation: get_device_properties_cirq_simulator in 0.0003s
+2025-06-13 23:48:58,348 - quantum_hardware.general - INFO - Completed operation: get_backend_noisy_cirq_simulator in 0.0000s
+2025-06-13 23:48:58,348 - quantum_hardware.general - INFO - Completed operation: get_device_properties_cirq_simulator in 0.0001s
+2025-06-13 23:48:58,349 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0000s
+2025-06-13 23:48:58,349 - quantum_hardware.general - INFO - Executing circuit on backend: cirq_simulator, Qubits: 2, Depth: 3, Reps: 1000
+2025-06-13 23:48:58,350 - quantum_hardware.general - INFO - Circuit execution successful on cirq_simulator: 2 qubits, 3 depth, 1000 shots, 0.0011s
+2025-06-13 23:48:58,350 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0012s
+2025-06-13 23:48:58,351 - quantum_hardware.general - WARNING - Operation run_circuit returned unsuccessful result with status unknown
+2025-06-13 23:48:58,409 - quantum_hardware.general - INFO - Registered backend: noisy_cirq_simulator
+2025-06-13 23:48:58,409 - quantum_hardware.general - INFO - Completed operation: get_backend_noisy_cirq_simulator in 0.0000s
+2025-06-13 23:48:58,409 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0000s
+2025-06-13 23:48:58,409 - quantum_hardware.general - INFO - Executing circuit on backend: cirq_simulator, Qubits: 2, Depth: 3, Reps: 1000
+2025-06-13 23:48:58,411 - quantum_hardware.general - INFO - Circuit execution successful on cirq_simulator: 2 qubits, 3 depth, 1000 shots, 0.0012s
+2025-06-13 23:48:58,411 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0013s
+2025-06-13 23:48:58,411 - quantum_hardware.general - WARNING - Operation run_circuit returned unsuccessful result with status unknown
+2025-06-13 23:48:58,411 - quantum_hardware.general - ERROR - hardware - unknown_error: Backend cirq_simulator is not available: error
+2025-06-13 23:48:58,411 - quantum_hardware.general - ERROR - Circuit execution failed on cirq_simulator: unknown_error: Backend cirq_simulator is not available: error
+2025-06-13 23:48:58,411 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0001s
+2025-06-13 23:48:58,422 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0000s
+2025-06-13 23:48:58,422 - quantum_hardware.general - INFO - Completed operation: get_device_properties_cirq_simulator in 0.0003s
+2025-06-13 23:48:58,422 - quantum_hardware.general - INFO - Completed operation: get_backend_noisy_cirq_simulator in 0.0000s
+2025-06-13 23:48:58,423 - quantum_hardware.general - INFO - Completed operation: get_device_properties_cirq_simulator in 0.0001s
+2025-06-13 23:48:58,424 - quantum_hardware.general - INFO - Executing circuit on backend: cirq_simulator, Qubits: 2, Depth: 7, Reps: 1000
+2025-06-13 23:48:58,424 - quantum_hardware.general - INFO - Circuit execution successful on cirq_simulator: 2 qubits, 7 depth, 1000 shots, 0.0001s
+2025-06-13 23:48:58,424 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0001s
+2025-06-13 23:48:58,424 - quantum_hardware.general - WARNING - Operation run_circuit returned unsuccessful result with status unknown
+2025-06-13 23:48:58,425 - quantum_hardware.general - INFO - Completed operation: get_statevector_cirq_simulator in 0.0000s
+2025-06-13 23:48:58,425 - quantum_hardware.general - ERROR - hardware - unknown_error: Error getting statevector: Circuit must not contain measurements for statevector simulation.
+2025-06-13 23:48:58,425 - quantum_hardware.general - INFO - Completed operation: get_device_properties_cirq_simulator in 0.0001s
+2025-06-13 23:48:58,427 - quantum_hardware.general - ERROR - Calibration standard_readout failed on cirq_simulator
+2025-06-13 23:48:58,427 - quantum_hardware.general - INFO - Executing circuit on backend: cirq_simulator, Qubits: 5, Depth: 1, Reps: 100
+2025-06-13 23:48:58,428 - quantum_hardware.general - INFO - Circuit execution successful on cirq_simulator: 5 qubits, 1 depth, 100 shots, 0.0007s
+2025-06-13 23:48:58,428 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0007s
+2025-06-13 23:48:58,428 - quantum_hardware.general - WARNING - Operation run_circuit returned unsuccessful result with status unknown
+2025-06-13 23:48:58,428 - quantum_hardware.general - ERROR - Calibration standard_readout failed on cirq_simulator
+2025-06-13 23:48:58,428 - quantum_hardware.general - INFO - Completed operation: calibrate_Enhanced Readout Error in 0.0009s
+2025-06-13 23:48:58,428 - quantum_hardware.general - ERROR - hardware - calibration_error: Readout error calibration failed: invalid literal for int() with base 2: 'execution_time'
+2025-06-13 23:48:58,428 - quantum_hardware.general - INFO - Completed operation: mitigate_Dynamical Decoupling in 0.0000s
+2025-06-13 23:48:58,428 - quantum_hardware.general - INFO - Executing circuit on backend: cirq_simulator, Qubits: 2, Depth: 7, Reps: 1000
+2025-06-13 23:48:58,429 - quantum_hardware.general - INFO - Circuit execution successful on cirq_simulator: 2 qubits, 7 depth, 1000 shots, 0.0013s
+2025-06-13 23:48:58,429 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0013s
+2025-06-13 23:48:58,429 - quantum_hardware.general - WARNING - Operation run_circuit returned unsuccessful result with status unknown
+2025-06-13 23:48:58,430 - quantum_hardware.general - INFO - Completed operation: mitigate_Zero Noise Extrapolation in 0.0003s
+2025-06-13 23:48:58,430 - quantum_hardware.general - INFO - Executing circuit on backend: cirq_simulator, Qubits: 2, Depth: 7, Reps: 1000
+2025-06-13 23:48:58,431 - quantum_hardware.general - INFO - Circuit execution successful on cirq_simulator: 2 qubits, 7 depth, 1000 shots, 0.0012s
+2025-06-13 23:48:58,431 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0012s
+2025-06-13 23:48:58,431 - quantum_hardware.general - WARNING - Operation run_circuit returned unsuccessful result with status unknown
+2025-06-13 23:48:58,431 - quantum_hardware.general - INFO - Executing circuit on backend: cirq_simulator, Qubits: 2, Depth: 13, Reps: 1000
+2025-06-13 23:48:58,432 - quantum_hardware.general - INFO - Circuit execution successful on cirq_simulator: 2 qubits, 13 depth, 1000 shots, 0.0015s
+2025-06-13 23:48:58,433 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0016s
+2025-06-13 23:48:58,433 - quantum_hardware.general - WARNING - Operation run_circuit returned unsuccessful result with status unknown
+2025-06-13 23:48:58,433 - quantum_hardware.general - INFO - Executing circuit on backend: cirq_simulator, Qubits: 2, Depth: 19, Reps: 1000
+2025-06-13 23:48:58,434 - quantum_hardware.general - INFO - Circuit execution successful on cirq_simulator: 2 qubits, 19 depth, 1000 shots, 0.0018s
+2025-06-13 23:48:58,434 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0019s
+2025-06-13 23:48:58,434 - quantum_hardware.general - WARNING - Operation run_circuit returned unsuccessful result with status unknown
+2025-06-13 23:48:58,438 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0000s
+2025-06-13 23:48:58,439 - quantum_hardware.general - INFO - Executing circuit on backend: cirq_simulator, Qubits: 2, Depth: 7, Reps: 1000
+2025-06-13 23:48:58,440 - quantum_hardware.general - INFO - Circuit execution successful on cirq_simulator: 2 qubits, 7 depth, 1000 shots, 0.0013s
+2025-06-13 23:48:58,440 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0013s
+2025-06-13 23:48:58,440 - quantum_hardware.general - WARNING - Operation run_circuit returned unsuccessful result with status unknown
+2025-06-13 23:48:58,440 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0014s
+2025-06-13 23:48:58,440 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0000s
+2025-06-13 23:48:58,440 - quantum_hardware.general - INFO - Executing circuit on backend: cirq_simulator, Qubits: 2, Depth: 7, Reps: 1000
+2025-06-13 23:48:58,442 - quantum_hardware.general - INFO - Circuit execution successful on cirq_simulator: 2 qubits, 7 depth, 1000 shots, 0.0012s
+2025-06-13 23:48:58,442 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0013s
+2025-06-13 23:48:58,442 - quantum_hardware.general - WARNING - Operation run_circuit returned unsuccessful result with status unknown
+2025-06-13 23:48:58,442 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0016s
+2025-06-13 23:48:58,442 - quantum_hardware.general - ERROR - hardware - unknown_error: 'EnhancedExecutionResult' object has no attribute 'get'
+2025-06-13 23:48:58,442 - quantum_hardware.general - ERROR - Exception details: 'EnhancedExecutionResult' object has no attribute 'get'
+2025-06-13 23:48:58,442 - quantum_hardware.general - INFO - Executing circuit on backend: cirq_simulator, Qubits: 5, Depth: 9, Reps: 1000
+2025-06-13 23:48:58,445 - quantum_hardware.general - INFO - Circuit execution successful on cirq_simulator: 5 qubits, 9 depth, 1000 shots, 0.0021s
+2025-06-13 23:48:58,445 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0022s
+2025-06-13 23:48:58,445 - quantum_hardware.general - WARNING - Operation run_circuit returned unsuccessful result with status unknown
+2025-06-13 23:48:58,445 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0023s
+2025-06-13 23:48:58,445 - quantum_hardware.general - ERROR - error_handler - ValueError: Validation error: Test value error
+2025-06-13 23:48:58,445 - quantum_hardware.general - ERROR - Exception details: Test value error
+2025-06-13 23:48:58,445 - quantum_hardware.general - ERROR - hardware - validation_error: Test value error
+2025-06-13 23:48:58,445 - quantum_hardware.general - ERROR - Exception details: Test value error
+2025-06-13 23:48:58,445 - quantum_hardware.general - ERROR - error_handler - ConnectionError: Connection error: Test connection error
+2025-06-13 23:48:58,445 - quantum_hardware.general - ERROR - Exception details: Test connection error
+2025-06-13 23:48:58,445 - quantum_hardware.general - ERROR - hardware - connection_error: Failed to connect to quantum hardware: Test connection error
+2025-06-13 23:48:58,445 - quantum_hardware.general - ERROR - Exception details: Test connection error
+2025-06-13 23:48:58,445 - quantum_hardware.general - ERROR - error_handler - ConnectionError: Connection error: Test timeout error
+2025-06-13 23:48:58,445 - quantum_hardware.general - ERROR - Exception details: Test timeout error
+2025-06-13 23:48:58,445 - quantum_hardware.general - ERROR - hardware - connection_error: Failed to connect to quantum hardware: Test timeout error
+2025-06-13 23:48:58,445 - quantum_hardware.general - ERROR - Exception details: Test timeout error
+2025-06-13 23:48:58,446 - quantum_hardware.general - ERROR - error_handler - MemoryError: Out of memory during quantum operation
+2025-06-13 23:48:58,446 - quantum_hardware.general - ERROR - hardware - resource_error: Out of memory. Try reducing circuit size or number of qubits.
+2025-06-13 23:48:58,446 - quantum_hardware.general - ERROR - error_handler - ConnectionError: Connection error: Test permission error
+2025-06-13 23:48:58,446 - quantum_hardware.general - ERROR - Exception details: Test permission error
+2025-06-13 23:48:58,446 - quantum_hardware.general - ERROR - hardware - connection_error: Failed to connect to quantum hardware: Test permission error
+2025-06-13 23:48:58,446 - quantum_hardware.general - ERROR - Exception details: Test permission error
+2025-06-13 23:48:58,446 - quantum_hardware.general - ERROR - error_handler - Exception: Unexpected error in quantum operation: 'Test key error'
+2025-06-13 23:48:58,446 - quantum_hardware.general - ERROR - Exception details: 'Test key error'
+2025-06-13 23:48:58,447 - quantum_hardware.general - ERROR - hardware - internal_error: Unexpected error during quantum operation: 'Test key error'
+2025-06-13 23:48:58,447 - quantum_hardware.general - ERROR - Exception details: 'Test key error'
+2025-06-13 23:48:58,447 - quantum_hardware.general - ERROR - error_handler - Exception: Error in function function_that_fails: Simulated failure in processing
+2025-06-13 23:48:58,447 - quantum_hardware.general - ERROR - Exception details: Simulated failure in processing
+2025-06-13 23:48:58,447 - quantum_hardware.general - ERROR - hardware - unknown_error: Backend TestFailingBackend is not available: error
+2025-06-13 23:48:58,447 - quantum_hardware.general - ERROR - Circuit execution failed on TestFailingBackend: unknown_error: Backend TestFailingBackend is not available: error
+2025-06-13 23:48:58,447 - quantum_hardware.general - INFO - Completed operation: run_circuit_TestFailingBackend in 0.0001s
+2025-06-13 23:48:58,447 - quantum_hardware.general - ERROR - hardware - unknown_error: Backend TestFailingBackend is not available: error
+2025-06-13 23:48:58,447 - quantum_hardware.general - ERROR - Circuit execution failed on TestFailingBackend: unknown_error: Backend TestFailingBackend is not available: error
+2025-06-13 23:48:58,448 - quantum_hardware.general - INFO - Completed operation: run_circuit_TestFailingBackend in 0.0001s
+2025-06-13 23:49:05,437 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0000s
+2025-06-13 23:49:05,439 - quantum_hardware.general - INFO - Executing circuit on backend: cirq_simulator, Qubits: 4, Depth: 9, Reps: 1000
+2025-06-13 23:49:05,439 - quantum_hardware.general - ERROR - Circuit execution failed on cirq_simulator: Circuit must contain measurement operations to run.
+2025-06-13 23:49:05,440 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0002s
+2025-06-13 23:49:05,440 - quantum_hardware.general - ERROR - hardware - unknown_error: Error during circuit execution: Circuit must contain measurement operations to run.
+2025-06-13 23:49:05,440 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0003s
+2025-06-13 23:49:05,440 - quantum_hardware.general - ERROR - hardware - unknown_error: Hardware error during energy calculation: unknown_error: Error during circuit execution: Circuit must contain measurement operations to run.
+2025-06-13 23:49:05,440 - quantum_hardware.general - INFO - Executing circuit on backend: cirq_simulator, Qubits: 4, Depth: 9, Reps: 1000
+2025-06-13 23:49:05,440 - quantum_hardware.general - ERROR - Circuit execution failed on cirq_simulator: Circuit must contain measurement operations to run.
+2025-06-13 23:49:05,440 - quantum_hardware.general - INFO - Completed operation: run_circuit_cirq_simulator in 0.0001s
+2025-06-13 23:49:05,441 - quantum_hardware.general - ERROR - hardware - unknown_error: Error during circuit execution: Circuit must contain measurement operations to run.
+2025-06-13 23:49:05,441 - quantum_hardware.general - INFO - Completed operation: enhanced_execute_with_hardware in 0.0002s
+2025-06-13 23:49:05,441 - quantum_hardware.general - ERROR - hardware - unknown_error: Hardware error during energy calculation: unknown_error: Error during circuit execution: Circuit must contain measurement operations to run.

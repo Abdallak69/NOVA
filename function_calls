@@ -1,0 +1,4 @@
+<invoke name="codebase_search">
+<parameter name="explanation">Searching for the _initialize_ansatz method to understand how ansatz is currently initialized</parameter>
+<parameter name="query">def _initialize_ansatz in qnn_molecular_energy.py</parameter>
+</invoke> 

@@ -1,0 +1,1539 @@
+{
+  "name": "Example Quantum Optimizer Benchmark",
+  "timestamp": "2025-03-12_12-05-52",
+  "configurations": [],
+  "summary": {
+    "rosenbrock_2d": {
+      "Noise-Aware BFGS": {
+        "status": "all_failed"
+      },
+      "Gradient-Free nelder-mead": {
+        "mean_value": 1.227833068087336,
+        "std_value": 1.2278330672689797,
+        "min_value": 8.183562959976163e-10,
+        "max_value": 2.4556661353563154,
+        "mean_time": 0.0009800195693969727,
+        "std_time": 3.921985626220703e-05,
+        "mean_iterations": 94.5,
+        "std_iterations": 0.5,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 0.8502261478276103,
+        "mean_value_error": 1.227833068087336
+      },
+      "Gradient-Free differential_evolution": {
+        "mean_value": 9.22036052386826e-11,
+        "std_value": 0.0,
+        "min_value": 9.22036052386826e-11,
+        "max_value": 9.22036052386826e-11,
+        "mean_time": 0.027542471885681152,
+        "std_time": 0.003661513328552246,
+        "mean_iterations": 1539.0,
+        "std_iterations": 0.0,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 2.1487897020452112e-05,
+        "mean_value_error": 9.22036052386826e-11
+      },
+      "Adaptive Optimizer": {
+        "mean_value": 0.0293238182869881,
+        "std_value": 0.02932381826718336,
+        "min_value": 1.9804738103401306e-11,
+        "max_value": 0.05864763655417146,
+        "mean_time": 0.00453794002532959,
+        "std_time": 0.000594019889831543,
+        "mean_iterations": 195.0,
+        "std_iterations": 9.0,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 0.22713177466017356,
+        "mean_value_error": 0.0293238182869881
+      },
+      "Parallel Tempering": {
+        "mean_value": 1.3794292263114125e-06,
+        "std_value": 1.3794265086038313e-06,
+        "min_value": 2.717707581285871e-12,
+        "max_value": 2.7588557349152438e-06,
+        "mean_time": 0.018296122550964355,
+        "std_time": 0.0012148618698120117,
+        "mean_iterations": 832.5,
+        "std_iterations": 52.5,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 0.0016624236227116825,
+        "mean_value_error": 1.3794292263114125e-06
+      }
+    },
+    "rosenbrock_5d": {
+      "Noise-Aware BFGS": {
+        "status": "all_failed"
+      },
+      "Gradient-Free nelder-mead": {
+        "mean_value": 3748.955644401871,
+        "std_value": 3194.340136182347,
+        "min_value": 554.6155082195239,
+        "max_value": 6943.295780584218,
+        "mean_time": 0.0007613897323608398,
+        "std_time": 4.2557716369628906e-05,
+        "mean_iterations": 81.5,
+        "std_iterations": 1.5,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 5.151465604535094,
+        "mean_value_error": 3748.955644401871
+      },
+      "Gradient-Free differential_evolution": {
+        "mean_value": 2.077956390765143e-11,
+        "std_value": 0.0,
+        "min_value": 2.077956390765143e-11,
+        "max_value": 2.077956390765143e-11,
+        "mean_time": 0.0652925968170166,
+        "std_time": 0.003273487091064453,
+        "mean_iterations": 3987.0,
+        "std_iterations": 0.0,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 8.609057918450733e-06,
+        "mean_value_error": 2.077956390765143e-11
+      },
+      "Adaptive Optimizer": {
+        "mean_value": 2.426956766066266,
+        "std_value": 1.5060501535308928,
+        "min_value": 0.9209066125353735,
+        "max_value": 3.933006919597159,
+        "mean_time": 0.005260944366455078,
+        "std_time": 9.799003601074219e-05,
+        "mean_iterations": 363.0,
+        "std_iterations": 3.0,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 2.2369785837701914,
+        "mean_value_error": 2.426956766066266
+      },
+      "Parallel Tempering": {
+        "mean_value": 0.004982254946104612,
+        "std_value": 0.0019976072450948036,
+        "min_value": 0.002984647701009809,
+        "max_value": 0.0069798621911994155,
+        "mean_time": 0.027928471565246582,
+        "std_time": 0.0011674165725708008,
+        "mean_iterations": 2007.0,
+        "std_iterations": 93.0,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 0.11133453092825066,
+        "mean_value_error": 0.004982254946104612
+      }
+    },
+    "sphere_2d": {
+      "Noise-Aware BFGS": {
+        "status": "all_failed"
+      },
+      "Gradient-Free nelder-mead": {
+        "mean_value": 1.4586732914814512e-09,
+        "std_value": 1.1165874723596103e-09,
+        "min_value": 3.4208581912184097e-10,
+        "max_value": 2.5752607638410613e-09,
+        "mean_time": 0.0006989240646362305,
+        "std_time": 2.8967857360839844e-05,
+        "mean_iterations": 94.0,
+        "std_iterations": 1.0,
+        "success_rate": 0.5,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 3.462129464478612e-05,
+        "mean_value_error": 1.4586732914814512e-09
+      },
+      "Gradient-Free differential_evolution": {
+        "mean_value": 5.1873825615191834e-17,
+        "std_value": 0.0,
+        "min_value": 5.1873825615191834e-17,
+        "max_value": 5.1873825615191834e-17,
+        "mean_time": 0.02253711223602295,
+        "std_time": 0.00010311603546142578,
+        "mean_iterations": 1533.0,
+        "std_iterations": 0.0,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 7.202348617998981e-09,
+        "mean_value_error": 5.1873825615191834e-17
+      },
+      "Adaptive Optimizer": {
+        "mean_value": 3.5804829137900943e-17,
+        "std_value": 1.4193501004556814e-17,
+        "min_value": 2.1611328133344126e-17,
+        "max_value": 4.999833014245776e-17,
+        "mean_time": 0.0017086267471313477,
+        "std_time": 0.0001283884048461914,
+        "mean_iterations": 107.0,
+        "std_iterations": 3.0,
+        "success_rate": 1.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 5.859874151463828e-09,
+        "mean_value_error": 3.5804829137900943e-17
+      },
+      "Parallel Tempering": {
+        "mean_value": 4.6917786013428475e-14,
+        "std_value": 4.6637839371528636e-14,
+        "min_value": 2.799466418998384e-16,
+        "max_value": 9.355562538495711e-14,
+        "mean_time": 0.00177001953125,
+        "std_time": 0.0,
+        "mean_iterations": 78.0,
+        "std_iterations": 6.0,
+        "success_rate": 1.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 1.613001234056624e-07,
+        "mean_value_error": 4.6917786013428475e-14
+      }
+    },
+    "sphere_5d": {
+      "Noise-Aware BFGS": {
+        "status": "all_failed"
+      },
+      "Gradient-Free nelder-mead": {
+        "mean_value": 28.74817456765573,
+        "std_value": 1.7742032436925737,
+        "min_value": 26.973971323963156,
+        "max_value": 30.522377811348303,
+        "mean_time": 0.0006504058837890625,
+        "std_time": 3.5762786865234375e-06,
+        "mean_iterations": 88.5,
+        "std_iterations": 4.5,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 5.359176668613734,
+        "mean_value_error": 28.74817456765573
+      },
+      "Gradient-Free differential_evolution": {
+        "mean_value": 2.5611931769579533e-14,
+        "std_value": 0.0,
+        "min_value": 2.5611931769579533e-14,
+        "max_value": 2.5611931769579533e-14,
+        "mean_time": 0.05612301826477051,
+        "std_time": 0.00031304359436035156,
+        "mean_iterations": 3843.0,
+        "std_iterations": 0.0,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 1.6003728243624837e-07,
+        "mean_value_error": 2.5611931769579533e-14
+      },
+      "Adaptive Optimizer": {
+        "mean_value": 1.30190396905987e-16,
+        "std_value": 4.9347946310491016e-18,
+        "min_value": 1.252556022749379e-16,
+        "max_value": 1.351251915370361e-16,
+        "mean_time": 0.003588438034057617,
+        "std_time": 3.552436828613281e-05,
+        "mean_iterations": 276.0,
+        "std_iterations": 3.0,
+        "success_rate": 1.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 1.1408050553687358e-08,
+        "mean_value_error": 1.30190396905987e-16
+      },
+      "Parallel Tempering": {
+        "mean_value": 9.210947186443674e-13,
+        "std_value": 3.4631884014507204e-13,
+        "min_value": 5.747758784992953e-13,
+        "max_value": 1.2674135587894394e-12,
+        "mean_time": 0.0024955272674560547,
+        "std_time": 9.465217590332031e-05,
+        "mean_iterations": 192.0,
+        "std_iterations": 0.0,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 9.419671915182672e-07,
+        "mean_value_error": 9.210947186443674e-13
+      }
+    },
+    "rastrigin_2d": {
+      "Noise-Aware BFGS": {
+        "status": "all_failed"
+      },
+      "Gradient-Free nelder-mead": {
+        "mean_value": 21.39144286525413,
+        "std_value": 4.477239623764401,
+        "min_value": 16.91420324148973,
+        "max_value": 25.868682489018532,
+        "mean_time": 0.0004725456237792969,
+        "std_time": 5.245208740234375e-05,
+        "mean_iterations": 59.0,
+        "std_iterations": 4.0,
+        "success_rate": 1.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 4.587778255488311,
+        "mean_value_error": 21.39144286525413
+      },
+      "Gradient-Free differential_evolution": {
+        "mean_value": 0.0,
+        "std_value": 0.0,
+        "min_value": 0.0,
+        "max_value": 0.0,
+        "mean_time": 0.024326562881469727,
+        "std_time": 2.956390380859375e-05,
+        "mean_iterations": 1533.0,
+        "std_iterations": 0.0,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 3.057125818159481e-09,
+        "mean_value_error": 0.0
+      },
+      "Adaptive Optimizer": {
+        "mean_value": 20.893962892048542,
+        "std_value": 3.9797600424936945,
+        "min_value": 16.914202849554847,
+        "max_value": 24.873722934542236,
+        "mean_time": 0.0010646581649780273,
+        "std_time": 4.0650367736816406e-05,
+        "mean_iterations": 61.0,
+        "std_iterations": 4.0,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 4.5384808846306814,
+        "mean_value_error": 20.893962892048542
+      },
+      "Parallel Tempering": {
+        "mean_value": 20.893962892048535,
+        "std_value": 3.9797600424936945,
+        "min_value": 16.91420284955484,
+        "max_value": 24.87372293454223,
+        "mean_time": 0.0037009716033935547,
+        "std_time": 0.00021886825561523438,
+        "mean_iterations": 168.0,
+        "std_iterations": 3.0,
+        "success_rate": 1.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 4.538480887302173,
+        "mean_value_error": 20.893962892048535
+      }
+    },
+    "rastrigin_5d": {
+      "Noise-Aware BFGS": {
+        "status": "all_failed"
+      },
+      "Gradient-Free nelder-mead": {
+        "mean_value": 46.73318766323653,
+        "std_value": 0.748314878807605,
+        "min_value": 45.98487278442892,
+        "max_value": 47.48150254204413,
+        "mean_time": 0.0008293390274047852,
+        "std_time": 5.602836608886719e-06,
+        "mean_iterations": 80.0,
+        "std_iterations": 1.0,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 6.787054279003417,
+        "mean_value_error": 46.73318766323653
+      },
+      "Gradient-Free differential_evolution": {
+        "mean_value": 2.984877171279905,
+        "std_value": 0.0,
+        "min_value": 2.984877171279905,
+        "max_value": 2.984877171279905,
+        "mean_time": 0.06522607803344727,
+        "std_time": 0.0007669925689697266,
+        "mean_iterations": 3879.0,
+        "std_iterations": 0.0,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 1.7233189081447415,
+        "mean_value_error": 2.984877171279905
+      },
+      "Adaptive Optimizer": {
+        "mean_value": 45.767818024354355,
+        "std_value": 6.10497031594548e-05,
+        "min_value": 45.76775697465119,
+        "max_value": 45.76787907405751,
+        "mean_time": 0.002504110336303711,
+        "std_time": 0.0002899169921875,
+        "mean_iterations": 168.0,
+        "std_iterations": 18.0,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 6.748049482732411,
+        "mean_value_error": 45.767818024354355
+      },
+      "Parallel Tempering": {
+        "mean_value": 41.290578453313984,
+        "std_value": 4.4773006207435095,
+        "min_value": 36.81327783257048,
+        "max_value": 45.7678790740575,
+        "mean_time": 0.013451099395751953,
+        "std_time": 0.003994941711425781,
+        "mean_iterations": 837.0,
+        "std_iterations": 225.0,
+        "success_rate": 0.0,
+        "run_count": 2,
+        "failure_count": 0,
+        "mean_param_error": 6.400048189080547,
+        "mean_value_error": 41.290578453313984
+      }
+    }
+  },
+  "raw_data": {
+    "rosenbrock_2d": {
+      "Noise-Aware BFGS": [
+        {
+          "run_id": 0,
+          "error": "BenchmarkSuite._register_test_functions.<locals>.<lambda>() got an unexpected keyword argument 'shots'",
+          "failed": true
+        },
+        {
+          "run_id": 1,
+          "error": "BenchmarkSuite._register_test_functions.<locals>.<lambda>() got an unexpected keyword argument 'shots'",
+          "failed": true
+        }
+      ],
+      "Gradient-Free nelder-mead": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            0.6181017827104371,
+            9.260714596148743
+          ],
+          "final_params": [
+            0.9999715149922506,
+            0.999942766965847
+          ],
+          "iterations": 94,
+          "function_evaluations": 94,
+          "value": 8.183562959976163e-10,
+          "time": 0.0010192394256591797,
+          "converged": false,
+          "param_error": 6.392977291401779e-05,
+          "value_error": 8.183562959976163e-10
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -3.2741815041533155,
+            4.135998089192221
+          ],
+          "final_params": [
+            -0.5100097450783654,
+            0.21821283932500424
+          ],
+          "iterations": 95,
+          "function_evaluations": 95,
+          "value": 2.4556661353563154,
+          "time": 0.0009407997131347656,
+          "converged": false,
+          "param_error": 1.7003883658823067,
+          "value_error": 2.4556661353563154
+        }
+      ],
+      "Gradient-Free differential_evolution": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            0.6181017827104371,
+            9.260714596148743
+          ],
+          "final_params": [
+            1.000009591199344,
+            1.0000192285884428
+          ],
+          "iterations": 1539,
+          "function_evaluations": 1539,
+          "value": 9.22036052386826e-11,
+          "time": 0.0312039852142334,
+          "converged": false,
+          "param_error": 2.1487897020452112e-05,
+          "value_error": 9.22036052386826e-11
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -3.2741815041533155,
+            4.135998089192221
+          ],
+          "final_params": [
+            1.000009591199344,
+            1.0000192285884428
+          ],
+          "iterations": 1539,
+          "function_evaluations": 1539,
+          "value": 9.22036052386826e-11,
+          "time": 0.023880958557128906,
+          "converged": false,
+          "param_error": 2.1487897020452112e-05,
+          "value_error": 9.22036052386826e-11
+        }
+      ],
+      "Adaptive Optimizer": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            0.6181017827104371,
+            9.260714596148743
+          ],
+          "final_params": [
+            0.9999955820632747,
+            0.9999911106135358
+          ],
+          "iterations": 204,
+          "function_evaluations": 204,
+          "value": 1.9804738103401306e-11,
+          "time": 0.005131959915161133,
+          "converged": false,
+          "param_error": 9.926699180399908e-06,
+          "value_error": 1.9804738103401306e-11
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -3.2741815041533155,
+            4.135998089192221
+          ],
+          "final_params": [
+            0.7822612559707489,
+            0.601331976435258
+          ],
+          "iterations": 186,
+          "function_evaluations": 186,
+          "value": 0.05864763655417146,
+          "time": 0.003943920135498047,
+          "converged": false,
+          "param_error": 0.45425362262116675,
+          "value_error": 0.05864763655417146
+        }
+      ],
+      "Parallel Tempering": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            0.6181017827104371,
+            9.260714596148743
+          ],
+          "final_params": [
+            0.999998351880159,
+            0.9999967075161273
+          ],
+          "iterations": 780,
+          "function_evaluations": 780,
+          "value": 2.717707581285871e-12,
+          "time": 0.017081260681152344,
+          "converged": false,
+          "param_error": 3.681949084673363e-06,
+          "value_error": 2.717707581285871e-12
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -3.2741815041533155,
+            4.135998089192221
+          ],
+          "final_params": [
+            0.9985460914267096,
+            0.9970139844631822
+          ],
+          "iterations": 885,
+          "function_evaluations": 885,
+          "value": 2.7588557349152438e-06,
+          "time": 0.019510984420776367,
+          "converged": false,
+          "param_error": 0.0033211652963386915,
+          "value_error": 2.7588557349152438e-06
+        }
+      ]
+    },
+    "rosenbrock_5d": {
+      "Noise-Aware BFGS": [
+        {
+          "run_id": 0,
+          "error": "BenchmarkSuite._register_test_functions.<locals>.<lambda>() got an unexpected keyword argument 'shots'",
+          "failed": true
+        },
+        {
+          "run_id": 1,
+          "error": "BenchmarkSuite._register_test_functions.<locals>.<lambda>() got an unexpected keyword argument 'shots'",
+          "failed": true
+        }
+      ],
+      "Gradient-Free nelder-mead": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            0.6181017827104371,
+            9.260714596148743,
+            5.9799091271710765,
+            3.979877262955549,
+            -2.659720393363452
+          ],
+          "final_params": [
+            1.2756857029548256,
+            -0.8668772127804125,
+            -1.7247898531786334,
+            1.3507251433526672,
+            -5.546480757377453
+          ],
+          "iterations": 80,
+          "function_evaluations": 80,
+          "value": 6943.295780584218,
+          "time": 0.0008039474487304688,
+          "converged": false,
+          "param_error": 7.346096331473657,
+          "value_error": 6943.295780584218
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -3.2741815041533155,
+            4.135998089192221,
+            -2.999135537210176,
+            -1.3911557005197683,
+            -0.0929141628329031
+          ],
+          "final_params": [
+            0.3647102685385364,
+            0.5293663315287265,
+            -0.2002855079747019,
+            -1.2617193803035023,
+            -0.24968937927696322
+          ],
+          "iterations": 83,
+          "function_evaluations": 83,
+          "value": 554.6155082195239,
+          "time": 0.0007188320159912109,
+          "converged": false,
+          "param_error": 2.9568348775965316,
+          "value_error": 554.6155082195239
+        }
+      ],
+      "Gradient-Free differential_evolution": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            0.6181017827104371,
+            9.260714596148743,
+            5.9799091271710765,
+            3.979877262955549,
+            -2.659720393363452
+          ],
+          "final_params": [
+            0.9999995352498732,
+            0.9999990205934773,
+            0.9999981718704312,
+            0.9999962833224258,
+            0.9999925310711266
+          ],
+          "iterations": 3987,
+          "function_evaluations": 3987,
+          "value": 2.077956390765143e-11,
+          "time": 0.06856608390808105,
+          "converged": false,
+          "param_error": 8.609057918450733e-06,
+          "value_error": 2.077956390765143e-11
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -3.2741815041533155,
+            4.135998089192221,
+            -2.999135537210176,
+            -1.3911557005197683,
+            -0.0929141628329031
+          ],
+          "final_params": [
+            0.9999995352498732,
+            0.9999990205934773,
+            0.9999981718704312,
+            0.9999962833224258,
+            0.9999925310711266
+          ],
+          "iterations": 3987,
+          "function_evaluations": 3987,
+          "value": 2.077956390765143e-11,
+          "time": 0.06201910972595215,
+          "converged": false,
+          "param_error": 8.609057918450733e-06,
+          "value_error": 2.077956390765143e-11
+        }
+      ],
+      "Adaptive Optimizer": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            0.6181017827104371,
+            9.260714596148743,
+            5.9799091271710765,
+            3.979877262955549,
+            -2.659720393363452
+          ],
+          "final_params": [
+            1.0815408119998522,
+            1.1650110124396218,
+            1.3513523033068109,
+            1.8154350513678228,
+            3.26726457237724
+          ],
+          "iterations": 360,
+          "function_evaluations": 360,
+          "value": 0.9209066125353735,
+          "time": 0.005162954330444336,
+          "converged": false,
+          "param_error": 2.4418740637967264,
+          "value_error": 0.9209066125353735
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -3.2741815041533155,
+            4.135998089192221,
+            -2.999135537210176,
+            -1.3911557005197683,
+            -0.0929141628329031
+          ],
+          "final_params": [
+            -0.9562636705108031,
+            0.9239597539774498,
+            0.8585314147053191,
+            0.7384499567537249,
+            0.5437212615106048
+          ],
+          "iterations": 366,
+          "function_evaluations": 366,
+          "value": 3.933006919597159,
+          "time": 0.00535893440246582,
+          "converged": false,
+          "param_error": 2.0320831037436564,
+          "value_error": 3.933006919597159
+        }
+      ],
+      "Parallel Tempering": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            0.6181017827104371,
+            9.260714596148743,
+            5.9799091271710765,
+            3.979877262955549,
+            -2.659720393363452
+          ],
+          "final_params": [
+            1.0088450964698978,
+            1.0177909003843264,
+            1.0358009986698633,
+            1.0724399906904516,
+            1.1495345715391694
+          ],
+          "iterations": 2100,
+          "function_evaluations": 2100,
+          "value": 0.0069798621911994155,
+          "time": 0.029095888137817383,
+          "converged": false,
+          "param_error": 0.17112744873468447,
+          "value_error": 0.0069798621911994155
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -3.2741815041533155,
+            4.135998089192221,
+            -2.999135537210176,
+            -1.3911557005197683,
+            -0.0929141628329031
+          ],
+          "final_params": [
+            0.9977405640801547,
+            0.9954721464814563,
+            0.9904243206153751,
+            0.9791267358931652,
+            0.9541355847645807
+          ],
+          "iterations": 1914,
+          "function_evaluations": 1914,
+          "value": 0.002984647701009809,
+          "time": 0.02676105499267578,
+          "converged": false,
+          "param_error": 0.05154161312181685,
+          "value_error": 0.002984647701009809
+        }
+      ]
+    },
+    "sphere_2d": {
+      "Noise-Aware BFGS": [
+        {
+          "run_id": 0,
+          "error": "BenchmarkSuite._register_test_functions.<locals>.<lambda>() got an unexpected keyword argument 'shots'",
+          "failed": true
+        },
+        {
+          "run_id": 1,
+          "error": "BenchmarkSuite._register_test_functions.<locals>.<lambda>() got an unexpected keyword argument 'shots'",
+          "failed": true
+        }
+      ],
+      "Gradient-Free nelder-mead": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            -2.50919762305275,
+            9.014286128198322
+          ],
+          "final_params": [
+            1.848887788631304e-05,
+            -4.972058194004316e-07
+          ],
+          "iterations": 95,
+          "function_evaluations": 95,
+          "value": 3.4208581912184097e-10,
+          "time": 0.0007278919219970703,
+          "converged": false,
+          "param_error": 1.8495562146683754e-05,
+          "value_error": 3.4208581912184097e-10
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -7.698908672204421,
+            2.181330785589628
+          ],
+          "final_params": [
+            -4.036012051486466e-05,
+            3.0762337945394557e-05
+          ],
+          "iterations": 93,
+          "function_evaluations": 93,
+          "value": 2.5752607638410613e-09,
+          "time": 0.0006699562072753906,
+          "converged": true,
+          "param_error": 5.074702714288849e-05,
+          "value_error": 2.5752607638410613e-09
+        }
+      ],
+      "Gradient-Free differential_evolution": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            -2.50919762305275,
+            9.014286128198322
+          ],
+          "final_params": [
+            -5.877128176514505e-10,
+            -7.1783298377240945e-09
+          ],
+          "iterations": 1533,
+          "function_evaluations": 1533,
+          "value": 5.1873825615191834e-17,
+          "time": 0.022640228271484375,
+          "converged": false,
+          "param_error": 7.202348617998981e-09,
+          "value_error": 5.1873825615191834e-17
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -7.698908672204421,
+            2.181330785589628
+          ],
+          "final_params": [
+            -5.877128176514505e-10,
+            -7.1783298377240945e-09
+          ],
+          "iterations": 1533,
+          "function_evaluations": 1533,
+          "value": 5.1873825615191834e-17,
+          "time": 0.022433996200561523,
+          "converged": false,
+          "param_error": 7.202348617998981e-09,
+          "value_error": 5.1873825615191834e-17
+        }
+      ],
+      "Adaptive Optimizer": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            -2.50919762305275,
+            9.014286128198322
+          ],
+          "final_params": [
+            -4.999997310345045e-09,
+            -4.999835701200598e-09
+          ],
+          "iterations": 110,
+          "function_evaluations": 110,
+          "value": 4.999833014245776e-17,
+          "time": 0.001837015151977539,
+          "converged": true,
+          "param_error": 7.070949734120429e-09,
+          "value_error": 4.999833014245776e-17
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -7.698908672204421,
+            2.181330785589628
+          ],
+          "final_params": [
+            -2.535198475572157e-09,
+            3.89667766472937e-09
+          ],
+          "iterations": 104,
+          "function_evaluations": 104,
+          "value": 2.1611328133344126e-17,
+          "time": 0.0015802383422851562,
+          "converged": true,
+          "param_error": 4.648798568807228e-09,
+          "value_error": 2.1611328133344126e-17
+        }
+      ],
+      "Parallel Tempering": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            -2.50919762305275,
+            9.014286128198322
+          ],
+          "final_params": [
+            9.856660487805868e-09,
+            1.352009193489323e-08
+          ],
+          "iterations": 84,
+          "function_evaluations": 84,
+          "value": 2.799466418998384e-16,
+          "time": 0.00177001953125,
+          "converged": true,
+          "param_error": 1.673160607651992e-08,
+          "value_error": 2.799466418998384e-16
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -7.698908672204421,
+            2.181330785589628
+          ],
+          "final_params": [
+            -1.533345761473015e-07,
+            2.646585217647157e-07
+          ],
+          "iterations": 72,
+          "function_evaluations": 72,
+          "value": 9.355562538495711e-14,
+          "time": 0.00177001953125,
+          "converged": true,
+          "param_error": 3.0586864073480486e-07,
+          "value_error": 9.355562538495711e-14
+        }
+      ]
+    },
+    "sphere_5d": {
+      "Noise-Aware BFGS": [
+        {
+          "run_id": 0,
+          "error": "BenchmarkSuite._register_test_functions.<locals>.<lambda>() got an unexpected keyword argument 'shots'",
+          "failed": true
+        },
+        {
+          "run_id": 1,
+          "error": "BenchmarkSuite._register_test_functions.<locals>.<lambda>() got an unexpected keyword argument 'shots'",
+          "failed": true
+        }
+      ],
+      "Gradient-Free nelder-mead": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            -2.50919762305275,
+            9.014286128198322,
+            4.639878836228101,
+            1.973169683940732,
+            -6.87962719115127
+          ],
+          "final_params": [
+            -4.1987971865058045,
+            0.17829493920360004,
+            1.0608728161234695,
+            3.4194205042844024,
+            -0.20688933148736943
+          ],
+          "iterations": 84,
+          "function_evaluations": 84,
+          "value": 30.522377811348303,
+          "time": 0.0006468296051025391,
+          "converged": false,
+          "param_error": 5.524706128958201,
+          "value_error": 30.522377811348303
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -7.698908672204421,
+            2.181330785589628,
+            -7.332180716280234,
+            -5.1882076006930244,
+            -3.4572188837772044
+          ],
+          "final_params": [
+            -0.1817850421441638,
+            4.054447095632635,
+            -1.1276315669237889,
+            -0.3627672694626556,
+            -3.016493200492171
+          ],
+          "iterations": 93,
+          "function_evaluations": 93,
+          "value": 26.973971323963156,
+          "time": 0.0006539821624755859,
+          "converged": false,
+          "param_error": 5.193647208269267,
+          "value_error": 26.973971323963156
+        }
+      ],
+      "Gradient-Free differential_evolution": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            -2.50919762305275,
+            9.014286128198322,
+            4.639878836228101,
+            1.973169683940732,
+            -6.87962719115127
+          ],
+          "final_params": [
+            -9.265785268861786e-08,
+            -7.197638684004326e-08,
+            -6.734056860499534e-10,
+            1.0236131769238324e-07,
+            -3.698054903901992e-08
+          ],
+          "iterations": 3843,
+          "function_evaluations": 3843,
+          "value": 2.5611931769579533e-14,
+          "time": 0.055809974670410156,
+          "converged": false,
+          "param_error": 1.6003728243624837e-07,
+          "value_error": 2.5611931769579533e-14
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -7.698908672204421,
+            2.181330785589628,
+            -7.332180716280234,
+            -5.1882076006930244,
+            -3.4572188837772044
+          ],
+          "final_params": [
+            -9.265785268861786e-08,
+            -7.197638684004326e-08,
+            -6.734056860499534e-10,
+            1.0236131769238324e-07,
+            -3.698054903901992e-08
+          ],
+          "iterations": 3843,
+          "function_evaluations": 3843,
+          "value": 2.5611931769579533e-14,
+          "time": 0.05643606185913086,
+          "converged": false,
+          "param_error": 1.6003728243624837e-07,
+          "value_error": 2.5611931769579533e-14
+        }
+      ],
+      "Adaptive Optimizer": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            -2.50919762305275,
+            9.014286128198322,
+            4.639878836228101,
+            1.973169683940732,
+            -6.87962719115127
+          ],
+          "final_params": [
+            1.1120265629403222e-09,
+            1.9672150205175924e-09,
+            -5.015369021839364e-12,
+            -1.0851765582352049e-08,
+            -3.501115838579793e-09
+          ],
+          "iterations": 273,
+          "function_evaluations": 273,
+          "value": 1.351251915370361e-16,
+          "time": 0.0035529136657714844,
+          "converged": true,
+          "param_error": 1.162433617618813e-08,
+          "value_error": 1.351251915370361e-16
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -7.698908672204421,
+            2.181330785589628,
+            -7.332180716280234,
+            -5.1882076006930244,
+            -3.4572188837772044
+          ],
+          "final_params": [
+            -5.006526444077614e-09,
+            -5.013399499934686e-09,
+            -5.008106933725779e-09,
+            4.985040506795789e-09,
+            -5.012420251706462e-09
+          ],
+          "iterations": 279,
+          "function_evaluations": 279,
+          "value": 1.252556022749379e-16,
+          "time": 0.00362396240234375,
+          "converged": true,
+          "param_error": 1.1191764931186587e-08,
+          "value_error": 1.252556022749379e-16
+        }
+      ],
+      "Parallel Tempering": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            -2.50919762305275,
+            9.014286128198322,
+            4.639878836228101,
+            1.973169683940732,
+            -6.87962719115127
+          ],
+          "final_params": [
+            -7.346931929497202e-08,
+            9.356509709235183e-07,
+            4.069087555791384e-07,
+            -1.897582304621892e-07,
+            -4.301048210919589e-07
+          ],
+          "iterations": 192,
+          "function_evaluations": 192,
+          "value": 1.2674135587894394e-12,
+          "time": 0.0024008750915527344,
+          "converged": false,
+          "param_error": 1.1257946343758437e-06,
+          "value_error": 1.2674135587894394e-12
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -7.698908672204421,
+            2.181330785589628,
+            -7.332180716280234,
+            -5.1882076006930244,
+            -3.4572188837772044
+          ],
+          "final_params": [
+            1.0582771459155538e-07,
+            2.991988921063893e-07,
+            4.1330513411708125e-07,
+            5.437711614320051e-09,
+            5.506411659972343e-07
+          ],
+          "iterations": 192,
+          "function_evaluations": 192,
+          "value": 5.747758784992953e-13,
+          "time": 0.002590179443359375,
+          "converged": false,
+          "param_error": 7.581397486606906e-07,
+          "value_error": 5.747758784992953e-13
+        }
+      ]
+    },
+    "rastrigin_2d": {
+      "Noise-Aware BFGS": [
+        {
+          "run_id": 0,
+          "error": "BenchmarkSuite._register_test_functions.<locals>.<lambda>() got an unexpected keyword argument 'shots'",
+          "failed": true
+        },
+        {
+          "run_id": 1,
+          "error": "BenchmarkSuite._register_test_functions.<locals>.<lambda>() got an unexpected keyword argument 'shots'",
+          "failed": true
+        }
+      ],
+      "Gradient-Free nelder-mead": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            -1.2847091830030082,
+            4.615314497637542
+          ],
+          "final_params": [
+            -0.9949830755018825,
+            4.974735372875205
+          ],
+          "iterations": 63,
+          "function_evaluations": 63,
+          "value": 25.868682489018532,
+          "time": 0.0005249977111816406,
+          "converged": true,
+          "param_error": 5.073261608735646,
+          "value_error": 25.868682489018532
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -3.9418412401686638,
+            1.1168413622218898
+          ],
+          "final_params": [
+            -3.9797986512938195,
+            0.995000582970778
+          ],
+          "iterations": 55,
+          "function_evaluations": 55,
+          "value": 16.91420324148973,
+          "time": 0.0004200935363769531,
+          "converged": true,
+          "param_error": 4.102294902240975,
+          "value_error": 16.91420324148973
+        }
+      ],
+      "Gradient-Free differential_evolution": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            -1.2847091830030082,
+            4.615314497637542
+          ],
+          "final_params": [
+            3.0545601308955254e-09,
+            -1.252225011760553e-10
+          ],
+          "iterations": 1533,
+          "function_evaluations": 1533,
+          "value": 0.0,
+          "time": 0.024296998977661133,
+          "converged": false,
+          "param_error": 3.057125818159481e-09,
+          "value_error": 0.0
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -3.9418412401686638,
+            1.1168413622218898
+          ],
+          "final_params": [
+            3.0545601308955254e-09,
+            -1.252225011760553e-10
+          ],
+          "iterations": 1533,
+          "function_evaluations": 1533,
+          "value": 0.0,
+          "time": 0.02435612678527832,
+          "converged": false,
+          "param_error": 3.057125818159481e-09,
+          "value_error": 0.0
+        }
+      ],
+      "Adaptive Optimizer": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            -1.2847091830030082,
+            4.615314497637542
+          ],
+          "final_params": [
+            -2.140442449962331e-09,
+            4.974691384036418
+          ],
+          "iterations": 57,
+          "function_evaluations": 57,
+          "value": 24.873722934542236,
+          "time": 0.0011053085327148438,
+          "converged": false,
+          "param_error": 4.974691384036418,
+          "value_error": 24.873722934542236
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -3.9418412401686638,
+            1.1168413622218898
+          ],
+          "final_params": [
+            -3.9797838681426545,
+            0.9949586304792354
+          ],
+          "iterations": 65,
+          "function_evaluations": 65,
+          "value": 16.914202849554847,
+          "time": 0.001024007797241211,
+          "converged": false,
+          "param_error": 4.102270385224946,
+          "value_error": 16.914202849554847
+        }
+      ],
+      "Parallel Tempering": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            -1.2847091830030082,
+            4.615314497637542
+          ],
+          "final_params": [
+            -2.98345010099228e-10,
+            4.9746913863454605
+          ],
+          "iterations": 165,
+          "function_evaluations": 165,
+          "value": 24.87372293454223,
+          "time": 0.0034821033477783203,
+          "converged": true,
+          "param_error": 4.9746913863454605,
+          "value_error": 24.87372293454223
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -3.9418412401686638,
+            1.1168413622218898
+          ],
+          "final_params": [
+            -3.979783867741992,
+            0.9949586445909627
+          ],
+          "iterations": 171,
+          "function_evaluations": 171,
+          "value": 16.91420284955484,
+          "time": 0.003919839859008789,
+          "converged": true,
+          "param_error": 4.1022703882588845,
+          "value_error": 16.91420284955484
+        }
+      ]
+    },
+    "rastrigin_5d": {
+      "Noise-Aware BFGS": [
+        {
+          "run_id": 0,
+          "error": "BenchmarkSuite._register_test_functions.<locals>.<lambda>() got an unexpected keyword argument 'shots'",
+          "failed": true
+        },
+        {
+          "run_id": 1,
+          "error": "BenchmarkSuite._register_test_functions.<locals>.<lambda>() got an unexpected keyword argument 'shots'",
+          "failed": true
+        }
+      ],
+      "Gradient-Free nelder-mead": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            -1.2847091830030082,
+            4.615314497637542,
+            2.3756179641487885,
+            1.010262878177655,
+            -3.52236912186945
+          ],
+          "final_params": [
+            -1.022698696703133,
+            4.97592630613003,
+            1.969528060971884,
+            1.0408314499887004,
+            -3.9983918009098147
+          ],
+          "iterations": 81,
+          "function_evaluations": 81,
+          "value": 47.48150254204413,
+          "time": 0.0008349418640136719,
+          "converged": false,
+          "param_error": 6.837782031631252,
+          "value_error": 47.48150254204413
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -3.9418412401686638,
+            1.1168413622218898,
+            -3.75407652673548,
+            -2.6563622915548284,
+            -1.7700960684939289
+          ],
+          "final_params": [
+            -3.9905868314925836,
+            0.9803056855705002,
+            -3.953545539189885,
+            -2.989142089366237,
+            -1.9816205015689752
+          ],
+          "iterations": 79,
+          "function_evaluations": 79,
+          "value": 45.98487278442892,
+          "time": 0.0008237361907958984,
+          "converged": false,
+          "param_error": 6.736326526375583,
+          "value_error": 45.98487278442892
+        }
+      ],
+      "Gradient-Free differential_evolution": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            -1.2847091830030082,
+            4.615314497637542,
+            2.3756179641487885,
+            1.010262878177655,
+            -3.52236912186945
+          ],
+          "final_params": [
+            -5.050017434503561e-09,
+            -6.7932574253267915e-09,
+            -0.994958642783854,
+            0.9949586329607637,
+            0.9949586308061977
+          ],
+          "iterations": 3879,
+          "function_evaluations": 3879,
+          "value": 2.984877171279905,
+          "time": 0.06599307060241699,
+          "converged": false,
+          "param_error": 1.7233189081447415,
+          "value_error": 2.984877171279905
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -3.9418412401686638,
+            1.1168413622218898,
+            -3.75407652673548,
+            -2.6563622915548284,
+            -1.7700960684939289
+          ],
+          "final_params": [
+            -5.050017434503561e-09,
+            -6.7932574253267915e-09,
+            -0.994958642783854,
+            0.9949586329607637,
+            0.9949586308061977
+          ],
+          "iterations": 3879,
+          "function_evaluations": 3879,
+          "value": 2.984877171279905,
+          "time": 0.06445908546447754,
+          "converged": false,
+          "param_error": 1.7233189081447415,
+          "value_error": 2.984877171279905
+        }
+      ],
+      "Adaptive Optimizer": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            -1.2847091830030082,
+            4.615314497637542,
+            2.3756179641487885,
+            1.010262878177655,
+            -3.52236912186945
+          ],
+          "final_params": [
+            -8.693415496872082e-09,
+            4.974691395780818,
+            1.9899122247582568,
+            0.994958632213952,
+            -3.9797838693919876
+          ],
+          "iterations": 186,
+          "function_evaluations": 186,
+          "value": 45.76775697465119,
+          "time": 0.002794027328491211,
+          "converged": false,
+          "param_error": 6.748031377549142,
+          "value_error": 45.76775697465119
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -3.9418412401686638,
+            1.1168413622218898,
+            -3.75407652673548,
+            -2.6563622915548284,
+            -1.7700960684939289
+          ],
+          "final_params": [
+            -3.979783867043227,
+            0.9949586297665136,
+            -3.979783855095093,
+            -2.984855709121896,
+            -1.9899122418339477
+          ],
+          "iterations": 150,
+          "function_evaluations": 150,
+          "value": 45.76787907405751,
+          "time": 0.002214193344116211,
+          "converged": false,
+          "param_error": 6.74806758791568,
+          "value_error": 45.76787907405751
+        }
+      ],
+      "Parallel Tempering": [
+        {
+          "run_id": 0,
+          "initial_params": [
+            -1.2847091830030082,
+            4.615314497637542,
+            2.3756179641487885,
+            1.010262878177655,
+            -3.52236912186945
+          ],
+          "final_params": [
+            -6.343814178474349e-09,
+            3.979783852726404,
+            1.9899122272173204,
+            0.994958631451888,
+            -3.9797838533999705
+          ],
+          "iterations": 1062,
+          "function_evaluations": 1062,
+          "value": 36.81327783257048,
+          "time": 0.017446041107177734,
+          "converged": false,
+          "param_error": 6.052028782526943,
+          "value_error": 36.81327783257048
+        },
+        {
+          "run_id": 1,
+          "initial_params": [
+            -3.9418412401686638,
+            1.1168413622218898,
+            -3.75407652673548,
+            -2.6563622915548284,
+            -1.7700960684939289
+          ],
+          "final_params": [
+            -3.9797838686213183,
+            0.9949586387096118,
+            -3.979783867532339,
+            -2.9848557088899157,
+            -1.9899122358543706
+          ],
+          "iterations": 612,
+          "function_evaluations": 612,
+          "value": 45.7678790740575,
+          "time": 0.009456157684326172,
+          "converged": false,
+          "param_error": 6.748067595634152,
+          "value_error": 45.7678790740575
+        }
+      ]
+    }
+  }
+}

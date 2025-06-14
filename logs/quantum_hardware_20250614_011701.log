@@ -1,0 +1,5 @@
+2025-06-14 01:17:01,864 - quantum_hardware.general - INFO - Registered backend: cirq_simulator
+2025-06-14 01:17:01,869 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0025s
+2025-06-14 01:17:01,869 - quantum_hardware.general - INFO - Completed operation: get_backend_cirq_simulator in 0.0025s
+2025-06-14 01:17:01,870 - quantum_hardware.general - INFO - Completed operation: get_device_properties_cirq_simulator in 0.0009s
+2025-06-14 01:17:01,870 - quantum_hardware.general - INFO - Completed operation: get_device_properties_cirq_simulator in 0.0009s

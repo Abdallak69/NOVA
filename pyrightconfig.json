@@ -1,0 +1,9 @@
+{
+  "venvPath": ".",
+  "venv": "qnn_env",
+  "extraPaths": [
+    "./qnn_env/lib/python3.11/site-packages"
+  ],
+  "reportMissingImports": false,
+  "reportMissingModuleSource": false
+} 

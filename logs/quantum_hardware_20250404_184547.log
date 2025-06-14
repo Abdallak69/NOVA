@@ -1,0 +1,28 @@
+2025-04-04 18:45:47,554 - quantum_hardware.general - ERROR - error_handler - ValueError: Validation error: Test value error
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - Exception details: Test value error
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - hardware - validation_error: Test value error
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - Exception details: Test value error
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - error_handler - ConnectionError: Connection error: Test connection error
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - Exception details: Test connection error
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - hardware - connection_error: Failed to connect to quantum hardware: Test connection error
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - Exception details: Test connection error
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - error_handler - ConnectionError: Connection error: Test timeout error
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - Exception details: Test timeout error
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - hardware - connection_error: Failed to connect to quantum hardware: Test timeout error
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - Exception details: Test timeout error
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - error_handler - MemoryError: Out of memory during quantum operation
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - hardware - resource_error: Out of memory. Try reducing circuit size or number of qubits.
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - error_handler - ConnectionError: Connection error: Test permission error
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - Exception details: Test permission error
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - hardware - connection_error: Failed to connect to quantum hardware: Test permission error
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - Exception details: Test permission error
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - error_handler - Exception: Unexpected error in quantum operation: 'Test key error'
+2025-04-04 18:45:47,555 - quantum_hardware.general - ERROR - Exception details: 'Test key error'
+2025-04-04 18:45:47,556 - quantum_hardware.general - ERROR - hardware - internal_error: Unexpected error during quantum operation: 'Test key error'
+2025-04-04 18:45:47,556 - quantum_hardware.general - ERROR - Exception details: 'Test key error'
+2025-04-04 18:45:47,556 - quantum_hardware.general - ERROR - error_handler - Exception: Error in function function_that_fails: Simulated failure in processing
+2025-04-04 18:45:47,556 - quantum_hardware.general - ERROR - Exception details: Simulated failure in processing
+2025-04-04 18:45:47,556 - quantum_hardware.general - WARNING - Operation run_with_retries failed with error: Simulated failure #1. Retrying (1/5)...
+2025-04-04 18:45:47,661 - quantum_hardware.general - WARNING - Operation run_with_retries failed with error: Simulated failure #2. Retrying (2/5)...
+2025-04-04 18:45:47,867 - quantum_hardware.general - ERROR - hardware - connection_error: Simulated failure #1
+2025-04-04 18:45:47,867 - quantum_hardware.general - ERROR - Exception details: Simulated failure #1

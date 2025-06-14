@@ -1,0 +1,5 @@
+2025-06-14 01:14:58,797 - quantum_hardware.general - INFO - Registered backend: cirq_simulator
+2025-06-14 01:14:58,800 - quantum_hardware.general - ERROR - hardware - unknown_error: Backend 'SimpleMockDevice (Simulator)' not registered.
+2025-06-14 01:14:58,800 - quantum_hardware.general - ERROR - hardware - unknown_error: Backend 'SimpleMockDevice (Simulator)' not registered.
+2025-06-14 01:14:58,800 - quantum_hardware.general - INFO - Completed operation: get_backend_SimpleMockDevice (Simulator) in 0.0001s
+2025-06-14 01:14:58,800 - quantum_hardware.general - INFO - Completed operation: get_backend_SimpleMockDevice (Simulator) in 0.0001s
