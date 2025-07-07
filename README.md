@@ -1,144 +1,335 @@
-# Quantum Neural Network Framework
+# NOVA - Quantum Neural Network Framework
 
-A research-oriented Python toolkit for building, training, and benchmarking **variational quantum algorithms** (VQAs) for molecular-energy estimation.
+[![CI](https://github.com/nova-team/nova-qnn/workflows/CI/badge.svg)](https://github.com/nova-team/nova-qnn/actions)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-It provides:
+A modern, professional Python package for **Quantum Neural Networks** focused on molecular energy estimation using variational quantum algorithms (VQAs).
 
-* Ready-made ansatz circuits (hardware-efficient, UCC, CHEA, HVA, symmetry-preserving …).
-* A flexible `MolecularQNN` class that wraps training, energy evaluation, hardware back-ends and error-mitigation in one object.
-* A hardware abstraction layer (`quantum_hardware_interface.py`) with pluggable back-ends (Cirq simulator by default, Qiskit and others optional).
-* An enhanced provider (`quantum_hardware_enhanced.py`) that adds logging, retry logic, circuit validation and a registry of custom back-ends / error-mitigation strategies.
-* A circuit-transpiler with multiple optimisation levels and hardware-aware passes.
-* CLI and PyQt5 GUI launchers for interactive experimentation.
-* A comprehensive pytest suite plus pre-commit / ruff for code-quality enforcement.
+## ✨ Features
 
----
+- **🏗️ Modern Package Structure**: Professional src-layout with proper module organization
+- **🎯 Multiple Ansatz Types**: Hardware-efficient, UCC, CHEA, HVA, symmetry-preserving circuits
+- **⚡ Flexible Training**: Support for various optimizers (BFGS, L-BFGS-B, Nelder-Mead, Powell)
+- **🔧 Hardware Abstraction**: Pluggable quantum backends (Cirq, Qiskit) with error mitigation
+- **🖥️ Modern CLI**: Click-based command-line interface with comprehensive options
+- **📊 GUI Applications**: PyQt5-based graphical interfaces for interactive exploration
+- **🧪 Comprehensive Testing**: Full test suite with CI/CD pipeline
+- **📦 Easy Installation**: pip-installable with optional extras for different features
 
-## Quick-start (TL;DR)
+## 🚀 Quick Start
+
+### Installation
 
 ```bash
-# 1. Clone & enter the project
-$ git clone https://github.com/your-org/quantum-qnn.git
-$ cd quantum-qnn
+# Install the base package
+pip install nova-qnn
 
-# 2. Create Python 3.11 virtual-env & install deps
-$ python -m venv qnn_env
-$ source qnn_env/bin/activate
-$ pip install -r requirements.txt
+# Or install with all optional dependencies
+pip install "nova-qnn[all]"
 
-# 3. Run the test-suite (optional but recommended)
-$ pytest -q
-
-# 4. Launch the GUI
-$ python ansatz_comparison_gui.py
-
-# 5. Or play with the CLI
-$ python cli_interface.py
+# For development
+git clone https://github.com/nova-team/nova-qnn.git
+cd nova-qnn
+pip install -e ".[dev]"
 ```
 
----
-
-## Repository layout
-
-```
-.
-├── ansatz_circuits.py          # All ansatz circuit classes & helpers
-├── qnn_molecular_energy.py     # MolecularQNN class: training, energy eval …
-├── quantum_hardware_interface.py   # Minimal hardware back-end ABC + Cirq impl.
-├── quantum_hardware_enhanced.py    # Provider with logging, retries, mitigation
-├── quantum_circuit_transpiler.py   # Optimisation / hardware-aware transpiler
-├── cli_interface.py             # Interactive command-line launcher
-├── ansatz_comparison_gui.py     # PyQt5 GUI for side-by-side ansatz runs
-├── tests/                       # Pytest suite (unit + integration)
-├── docs/ / *.md                 # Design notes & deep-dives
-└── requirements.txt             # Pinned run-time dependencies
-```
-
-### Key entry points
-
-| File | What it does |
-|------|--------------|
-| `qnn_molecular_energy.py` | Core API. Instantiate `MolecularQNN` → call `train()` / `get_energy()` |
-| `cli_interface.py` | Menu-driven flow for quick experiments without coding |
-| `ansatz_comparison_gui.py` | Desktop GUI with live plots for comparing ansätze |
-| `quantum_hardware_interface.py` | Minimal abstraction of *any* quantum device / simulator |
-| `quantum_hardware_enhanced.py` | Adds provider registry, retries, circuit validation, error-mitigation |
-| `quantum_circuit_transpiler.py` | Gate-set & connectivity aware transpilation with 5 optimisation levels |
-
----
-
-## Installation details
-
-1. **Python** 3.10+ (tested with 3.11).
-2. `pip install -r requirements.txt` installs pinned versions of:
-   * Cirq 1.2, OpenFermion 1.6, NumPy/SciPy, Matplotlib, PyQt5 …
-   * Dev-tools: `pytest`, `ruff`, `pre-commit`.
-3. Optional extras (commented in `requirements.txt`): Qiskit, PennyLane, Braket …
-
-> ✨ Tip: activate pre-commit hooks with `pre-commit install` to auto-run ruff & pytest on each commit.
-
----
-
-## Typical workflows
-
-### 1. Energy estimation from Python
+### Basic Usage
 
 ```python
-from qnn_molecular_energy import MolecularQNN
+from nova.core.qnn_molecular_energy import MolecularQNN
 
+# Create a quantum neural network for H2 molecule
 qnn = MolecularQNN(
-    molecule="H2",           # or "LiH", "H2O"
+    molecule="H2",
     bond_length=0.74,
-    ansatz_type="ucc",      # see list at top
-    depth=2,
+    ansatz_type="hardware_efficient",
+    depth=2
 )
-qnn.train(iterations=100, method="BFGS")
-print("Energy:", qnn.get_energy())
+
+# Train the model
+results = qnn.train(iterations=100, method="BFGS")
+
+# Get the final energy estimate
+energy = qnn.get_energy()
+print(f"Final energy: {energy:.6f} Hartree")
 ```
 
-### 2. CLI exploration
-Run `python cli_interface.py` and follow the prompts to:
-* create a model
-* train with different optimisers
-* run quick comparisons or hardware simulations
+### Command Line Interface
 
-### 3. GUI visual comparison
-Run `python ansatz_comparison_gui.py` and select molecules / ansätze; live charts will show convergence per ansatz.
+```bash
+# Get help
+nova --help
 
-### 4. Add a new hardware back-end
+# Train a model
+nova train --molecule H2 --depth 2 --iterations 100 --save my_model.pkl
+
+# Load and inspect a saved model
+nova load my_model.pkl
+
+# Compare different ansatz types
+nova compare --molecule H2 --iterations 50
+
+# Launch GUI applications
+nova-gui launcher
+nova-gui compare
+```
+
+## 📖 Getting Started Guide
+
+### 1. Understanding the Package Structure
+
+NOVA is organized into focused modules:
+
+```
+src/nova/
+├── core/           # Core QNN functionality and optimizers
+├── ansatz/         # Quantum circuit ansatz implementations  
+├── hardware/       # Hardware abstraction and quantum backends
+├── transpiler/     # Circuit optimization and transpilation
+├── mitigation/     # Quantum error mitigation strategies
+├── cli/            # Command-line interface
+└── gui/            # Graphical user interfaces
+```
+
+### 2. Training Your First Model
+
 ```python
-from quantum_hardware_interface import QuantumBackend
-from quantum_hardware_enhanced import default_provider
+from nova.core.qnn_molecular_energy import MolecularQNN
 
-class MyBackend(QuantumBackend):
-    def run_circuit(self, circuit, repetitions=1000): ...
-    def get_device_properties(self): ...
+# Step 1: Create a QNN instance
+qnn = MolecularQNN(
+    molecule="H2",           # Molecule: H2, LiH, or H2O
+    bond_length=0.74,        # Bond length in Angstroms
+    ansatz_type="ucc",       # Ansatz: hardware_efficient, ucc, chea, hva, symmetry_preserving
+    depth=3                  # Circuit depth
+)
 
-def backend_factory(**kwargs):
-    return MyBackend("my_backend", **kwargs)
+# Step 2: Train the model
+print("Training quantum neural network...")
+results = qnn.train(
+    iterations=200,          # Number of optimization iterations
+    method="BFGS",          # Optimization method
+    verbose=True            # Show progress
+)
 
-default_provider.register_backend("my_backend", backend_factory)
+# Step 3: Analyze results
+print(f"\nTraining Results:")
+print(f"Final Energy: {results['energy']:.6f} Hartree")
+print(f"Training Time: {results['training_time']:.2f} seconds")
+print(f"Converged: {results['success']}")
+
+# Step 4: Save the trained model
+qnn.save_model("h2_model.pkl")
 ```
 
+### 3. Comparing Different Ansatz Types
+
+```python
+# Compare multiple ansatz types for the same molecule
+results, fig = qnn.compare_ansatz_types(
+    methods=["hardware_efficient", "ucc", "chea"],
+    iterations=100,
+    save_path="ansatz_comparison.png"
+)
+
+# Analyze which ansatz performed best
+for ansatz, data in results.items():
+    if ansatz != "exact_energy":
+        print(f"{ansatz}: {data['final_energy']:.6f} Hartree")
+```
+
+### 4. Using Hardware Backends
+
+```python
+from nova.hardware.quantum_hardware_interface import CirqSimulatorBackend
+
+# Create a quantum hardware backend
+backend = CirqSimulatorBackend(name="cirq_simulator")
+
+# Use it in your QNN
+qnn = MolecularQNN(
+    molecule="H2",
+    bond_length=0.74,
+    hardware_backend=backend
+)
+
+# Training will now use the specified backend
+results = qnn.train(iterations=50)
+```
+
+### 5. Command Line Workflows
+
+```bash
+# Quick training session
+nova train --molecule H2 --bond-length 0.74 --ansatz ucc --depth 3 --iterations 100 --plot
+
+# Compare multiple ansatz types
+nova compare --molecule LiH --iterations 75 --save comparison_results.png
+
+# Get system information
+nova info
+
+# List available quantum backends
+nova backends
+
+# Run the test suite
+nova test
+```
+
+### 6. GUI Applications
+
+```bash
+# Launch the main GUI selector
+nova-gui launcher
+
+# Launch ansatz comparison GUI directly
+nova-gui compare
+
+# Launch the main GUI interface
+nova-gui main-gui
+```
+
+## 🛠️ Advanced Usage
+
+### Custom Optimizers
+
+```python
+from nova.core.advanced_optimizers import create_optimizer
+
+# Use advanced optimizers
+optimizer = create_optimizer("gradient_free", method="nelder-mead")
+qnn = MolecularQNN(molecule="H2", optimizer=optimizer)
+```
+
+### Error Mitigation
+
+```python
+from nova.mitigation.quantum_error_mitigation import ZeroNoiseExtrapolation
+
+# Apply error mitigation
+mitigation = ZeroNoiseExtrapolation()
+qnn = MolecularQNN(
+    molecule="H2", 
+    error_mitigation=mitigation
+)
+```
+
+### Circuit Transpilation
+
+```python
+from nova.transpiler.quantum_circuit_transpiler import CircuitTranspiler
+
+# Optimize circuits for specific hardware
+transpiler = CircuitTranspiler(optimization_level=3)
+optimized_circuit = transpiler.transpile(qnn.get_circuit())
+```
+
+## 📦 Installation Options
+
+### Basic Installation
+```bash
+pip install nova-qnn
+```
+
+### With Optional Dependencies
+```bash
+# GUI support
+pip install "nova-qnn[gui]"
+
+# Qiskit support  
+pip install "nova-qnn[qiskit]"
+
+# Enhanced Cirq features
+pip install "nova-qnn[cirq]"
+
+# Quantum chemistry (PySCF)
+pip install "nova-qnn[pyscf]"
+
+# Everything
+pip install "nova-qnn[all]"
+```
+
+### Development Setup
+```bash
+git clone https://github.com/nova-team/nova-qnn.git
+cd nova-qnn
+pip install -e ".[dev]"
+
+# Install pre-commit hooks
+pre-commit install
+
+# Run tests
+pytest
+
+# Run linting
+ruff check src --fix
+```
+
+## 🧪 Testing
+
+```bash
+# Run all tests
+pytest
+
+# Run specific test categories
+pytest -m "not slow"           # Skip slow tests
+pytest -m integration          # Only integration tests
+pytest tests/core/             # Test specific module
+
+# With coverage
+pytest --cov=nova --cov-report=html
+```
+
+## 📊 Available Molecules and Ansatz Types
+
+### Supported Molecules
+- **H2**: Hydrogen molecule (customizable bond length)
+- **LiH**: Lithium hydride  
+- **H2O**: Water molecule
+
+### Ansatz Types
+- **hardware_efficient**: Hardware-efficient ansatz with parameterized rotations
+- **ucc**: Unitary Coupled Cluster ansatz
+- **chea**: Chemistry-inspired ansatz
+- **hva**: Hamiltonian Variational Ansatz
+- **symmetry_preserving**: Particle-number conserving ansatz
+
+### Optimization Methods
+- **BFGS**: Broyden-Fletcher-Goldfarb-Shanno
+- **L-BFGS-B**: Limited-memory BFGS with bounds
+- **Nelder-Mead**: Simplex method
+- **Powell**: Powell's conjugate direction method
+
+## 🤝 Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Install development dependencies (`pip install -e ".[dev]"`)
+4. Make your changes and add tests
+5. Run the test suite (`pytest`)
+6. Commit your changes (`git commit -m 'Add amazing feature'`)
+7. Push to the branch (`git push origin feature/amazing-feature`)
+8. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built on top of [Cirq](https://quantumai.google/cirq) and [OpenFermion](https://quantumai.google/openfermion)
+- Inspired by quantum machine learning research
+- Thanks to all contributors and the quantum computing community
+
+## 📚 Documentation and Support
+
+- **Documentation**: [Coming soon]
+- **Issues**: [GitHub Issues](https://github.com/nova-team/nova-qnn/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/nova-team/nova-qnn/discussions)
+
 ---
 
-## Testing & quality gates
-
-* **Run all tests**: `pytest -q`
-* **Lint / format**: `ruff check --fix . && ruff format .`
-* **Pre-commit**: installs hooks that run the above automatically.
-
----
-
-## Contributing
-
-1. Fork / branch off `master`.
-2. Activate pre-commit: `pre-commit install`.
-3. Add tests for any new feature or bug-fix.
-4. Open a PR – GitHub Actions will run lint + tests.
-
----
-
-## License
-
-This project is released under the MIT License. See `LICENSE` for details. 
+*NOVA - Advancing quantum neural networks for molecular simulation* 🚀 
