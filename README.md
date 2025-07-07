@@ -1,7 +1,9 @@
 # NOVA - Quantum Neural Network Framework
 
 [![CI](https://github.com/nova-team/nova-qnn/workflows/CI/badge.svg)](https://github.com/nova-team/nova-qnn/actions)
+
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 A modern, professional Python package for **Quantum Neural Networks** focused on molecular energy estimation using variational quantum algorithms (VQAs).
@@ -320,15 +322,16 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## 🙏 Acknowledgments
 
+- Me 
 - Built on top of [Cirq](https://quantumai.google/cirq) and [OpenFermion](https://quantumai.google/openfermion)
-- Inspired by quantum machine learning research
-- Thanks to all contributors and the quantum computing community
+- Inspired by my quantum machine learning research and general interest
+- Thanks to all contributors and the quantum computing community (Goated fr fr)
 
 ## 📚 Documentation and Support
 
 - **Documentation**: [Coming soon]
-- **Issues**: [GitHub Issues](https://github.com/nova-team/nova-qnn/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/nova-team/nova-qnn/discussions)
+- **Issues**: [GitHub Issues](https://github.com/nova-team/nova-qnn/issues) [Coming Soon]
+- **Discussions**: [GitHub Discussions](https://github.com/nova-team/nova-qnn/discussions) [Coming Soon]
 
 ---
 
