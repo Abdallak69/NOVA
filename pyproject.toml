@@ -1,4 +1,107 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nova-qnn"
+version = "0.1.0"
+description = "NOVA Quantum Neural Network for Molecular Energy Estimation"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "NOVA Team", email = "nova@example.com" }
+]
+maintainers = [
+    { name = "NOVA Team", email = "nova@example.com" }
+]
+keywords = [
+    "quantum computing",
+    "quantum neural networks",
+    "molecular energy",
+    "quantum chemistry",
+    "variational quantum eigensolver",
+    "quantum machine learning"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.21.0",
+    "scipy>=1.7.0",
+    "matplotlib>=3.3.0",
+    "cirq>=1.0.0",
+    "openfermion>=1.5.0",
+    "click>=8.0.0",
+    "tabulate>=0.9.0",
+]
+
+[project.optional-dependencies]
+gui = [
+    "PyQt5>=5.12.0",
+]
+qiskit = [
+    "qiskit>=0.40.0",
+    "qiskit-aer>=0.11.0",
+]
+cirq = [
+    "cirq[contrib]>=1.0.0",
+]
+pyscf = [
+    "pyscf>=2.0.0",
+]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=3.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0",
+    "black>=22.0",
+    "isort>=5.10",
+    "pre-commit>=2.15",
+    "sphinx>=4.0",
+    "sphinx-rtd-theme>=1.0",
+    "myst-parser>=0.18",
+]
+all = [
+    "nova-qnn[gui,qiskit,cirq,pyscf]",
+]
+
+[project.urls]
+Homepage = "https://github.com/nova-team/nova-qnn"
+Documentation = "https://nova-qnn.readthedocs.io"
+Repository = "https://github.com/nova-team/nova-qnn.git"
+"Bug Tracker" = "https://github.com/nova-team/nova-qnn/issues"
+Changelog = "https://github.com/nova-team/nova-qnn/blob/main/CHANGELOG.md"
+
+[project.scripts]
+nova = "nova.cli.__main__:main"
+nova-gui = "nova.gui.launch:main"
+
+[tool.setuptools]
+zip-safe = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["nova*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+# Ruff configuration
 [tool.ruff]
+src = ["src"]
 line-length = 88
 target-version = "py38"
 extend-exclude = [
@@ -10,41 +113,155 @@ extend-exclude = [
     "demo_logs",
     "test_logs",
     "qnn_env",
+    "scripts",
 ]
 
 [tool.ruff.lint]
 select = [
-    "E",  # pycodestyle errors
-    "W",  # pycodestyle warnings
-    "F",  # pyflakes
-    "I",  # isort
-    "B",  # flake8-bugbear
-    "C4", # flake8-comprehensions
-    "UP", # pyupgrade
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+    "N",   # pep8-naming
+    "S",   # flake8-bandit
+    "T20", # flake8-print
+    "SIM", # flake8-simplify
 ]
 ignore = [
     "E501",  # line too long, handled by line-length
     "B008",  # do not perform function calls in argument defaults
     "B904",  # raise-without-from-inside-except
-    "UP007", # Use X | Y for type annotations
+    "UP007", # Use X | Y for type annotations (not compatible with Python 3.8)
+    "S101",  # assert-false (useful in tests)
+    "T201",  # print statements (useful for CLI)
+    "N806",  # Variable in function should be lowercase (conflicts with scientific naming)
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"test_*.py" = ["B011"]  # assert-false
-"*test*.py" = ["B011"]
-"minimal_test.py" = ["B011"]
-"basic_qnn_test.py" = ["B011"]
+"test_*.py" = ["S101", "B011", "T201"]
+"*test*.py" = ["S101", "B011", "T201"]
+"examples/*.py" = ["T201", "S101"]
+"scripts/*.py" = ["T201", "S101"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["qnn_molecular_energy", "ansatz_circuits", "quantum_hardware"]
+known-first-party = ["nova"]
+force-single-line = false
+combine-as-imports = true
 
+# Pytest configuration
 [tool.pytest.ini_options]
-testpaths = [".", "tests"]
+testpaths = ["tests"]
 python_files = ["test_*.py", "*_test.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
-addopts = "-v --tb=short"
+addopts = "-q --tb=short --strict-markers"
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "hardware: marks tests that require quantum hardware",
+    "gui: marks tests that require GUI dependencies",
+]
 filterwarnings = [
     "ignore::DeprecationWarning:qiskit.*",
     "ignore::PendingDeprecationWarning:qiskit.*",
-] 
+    "ignore::DeprecationWarning:cirq.*",
+    "ignore::UserWarning:matplotlib.*",
+]
+
+# MyPy configuration
+[tool.mypy]
+python_version = "3.8"
+mypy_path = "src"
+packages = ["nova"]
+strict = false
+warn_return_any = true
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+disallow_any_generics = false
+disallow_subclassing_any = true
+disallow_untyped_calls = false
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+check_untyped_defs = true
+disallow_untyped_decorators = false
+no_implicit_optional = true
+warn_incomplete_stub = true
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+module = [
+    "cirq.*",
+    "openfermion.*",
+    "qiskit.*",
+    "pyscf.*",
+    "matplotlib.*",
+    "PyQt5.*",
+]
+ignore_missing_imports = true
+
+# Coverage configuration
+[tool.coverage.run]
+source = ["src"]
+branch = true
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/__pycache__/*",
+    "*/examples/*",
+    "*/scripts/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+show_missing = true
+precision = 2
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+# Black configuration
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | venv
+  | \.pytest_cache
+  | _build
+  | buck-out
+  | build
+  | dist
+  | qnn_env
+)/
+'''
+
+# isort configuration
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["nova"]
+src_paths = ["src", "tests"] 
