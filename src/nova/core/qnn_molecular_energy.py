@@ -26,8 +26,10 @@ try:
     backend_env = os.environ.get("MPLBACKEND", "")
     if not backend_env or backend_env.lower() in {"qt5agg", "qtagg", "qt6agg", "qt5", "qt"}:
         matplotlib.use("Agg", force=True)
-except Exception:
-    pass
+except Exception as e:
+    logging.getLogger(__name__).debug(
+        "Matplotlib import/backend setup skipped: %s", e
+    )
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -1099,8 +1101,10 @@ class MolecularQNN:
             if "agg" not in str(matplotlib.get_backend()).lower():
                 # Switch only if not already non-interactive
                 plt.switch_backend("Agg")
-        except Exception:
-            pass
+        except Exception as e:
+            self.logger.debug(
+                "Could not switch Matplotlib backend to Agg: %s", e
+            )
 
         fig, ax = plt.subplots(figsize=(10, 6))
 
