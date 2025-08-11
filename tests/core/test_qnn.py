@@ -3,6 +3,10 @@
 Simple script to test the QNN functionality programmatically.
 """
 
+import matplotlib
+
+# Force a non-interactive backend for headless CI environments before importing pyplot
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pytest
 
