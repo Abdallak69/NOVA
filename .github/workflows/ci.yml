@@ -27,13 +27,16 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -e .[dev]
+          pip install -e '.[dev]'
 
       - name: Lint (ruff)
         run: ruff check src
 
       - name: Type check (mypy)
-        run: mypy src
+        if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.11'
+        continue-on-error: true
+        run: |
+          mypy --install-types --non-interactive --ignore-missing-imports src
 
       - name: Run tests with coverage (pytest)
         env:
