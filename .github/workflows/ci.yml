@@ -66,5 +66,5 @@ jobs:
       - name: Upload dist artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: dist-${{ matrix.python-version }}
+          name: dist-${{ matrix.os }}-py${{ matrix.python-version }}
           path: dist/* 
