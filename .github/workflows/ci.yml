@@ -40,10 +40,10 @@ jobs:
 
       - name: Run tests with coverage (pytest)
         env:
+          MPLBACKEND: Agg
           QT_QPA_PLATFORM: offscreen
         run: |
-          pytest -m "not hardware and not gui" --maxfail=1 --disable-warnings -q \
-            --cov=nova --cov-report=term-missing --cov-report=xml
+          python -m pytest -m "not hardware and not gui" --maxfail=1 --disable-warnings -q --cov=nova --cov-report=term-missing --cov-report=xml
 
       - name: Upload coverage artifact
         uses: actions/upload-artifact@v4

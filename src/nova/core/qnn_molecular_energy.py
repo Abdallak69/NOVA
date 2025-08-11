@@ -18,6 +18,17 @@ import cirq
 # Removing TensorFlow and TensorFlow Quantum imports
 # import tensorflow as tf
 # import tensorflow_quantum as tfq
+# Ensure a non-interactive matplotlib backend in headless/test environments before importing pyplot
+try:
+    import matplotlib
+
+    # If MPLBACKEND is not explicitly set to a GUI backend, force Agg
+    backend_env = os.environ.get("MPLBACKEND", "")
+    if not backend_env or backend_env.lower() in {"qt5agg", "qtagg", "qt6agg", "qt5", "qt"}:
+        matplotlib.use("Agg", force=True)
+except Exception:
+    pass
+
 import matplotlib.pyplot as plt
 import numpy as np
 import openfermion
@@ -674,7 +685,13 @@ class MolecularQNN:
                 if callback:
 
                     def scipy_callback(intermediate_result):
-                        internal_callback(intermediate_result.x)
+                        # SciPy passes xk (ndarray) to callback; some optimizers may pass an object with .x
+                        if isinstance(intermediate_result, np.ndarray):
+                            internal_callback(intermediate_result)
+                        elif hasattr(intermediate_result, "x"):
+                            internal_callback(intermediate_result.x)
+                        else:
+                            internal_callback(np.asarray(intermediate_result))
 
                     scipy_callback_wrapper = scipy_callback
                 else:
@@ -1075,7 +1092,16 @@ class MolecularQNN:
         original_optimizer_input = self._optimizer_input
         original_params = self.params.copy()  # Save initial params
 
-        # Initialize the figure
+        # Initialize the figure (force a non-interactive backend in headless/test envs)
+        try:
+            import matplotlib
+
+            if "agg" not in str(matplotlib.get_backend()).lower():
+                # Switch only if not already non-interactive
+                plt.switch_backend("Agg")
+        except Exception:
+            pass
+
         fig, ax = plt.subplots(figsize=(10, 6))
 
         # Compare each method
