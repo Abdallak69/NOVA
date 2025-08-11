@@ -2,6 +2,8 @@
 
 We welcome contributions to the NOVA project! This document provides guidelines for contributing code, reporting issues, and submitting improvements.
 
+By participating, you agree to follow our [Code of Conduct](CODE_OF_CONDUCT.md). For help routes and where to ask questions, see [SUPPORT.md](SUPPORT.md).
+
 ## Table of Contents
 
 - [Development Setup](#development-setup)
@@ -10,6 +12,9 @@ We welcome contributions to the NOVA project! This document provides guidelines 
 - [Submitting Changes](#submitting-changes)
 - [Issue Reporting](#issue-reporting)
 - [Documentation](#documentation)
+ - [Release Process](#release-process)
+ - [Community Discussions](#community-discussions)
+ - [Getting Help](#getting-help)
 
 ## Development Setup
 
@@ -259,10 +264,12 @@ Describe:
 
 ### Questions and Support
 
-For questions about usage:
-1. Check existing documentation
-2. Search existing issues
-3. Create a new issue with the "question" label
+For questions about usage, please see [SUPPORT.md](SUPPORT.md). In brief:
+- Use [GitHub Discussions](https://github.com/nova-team/nova-qnn/discussions) for Q&A, ideas, and guidance.
+- Use [Issues](https://github.com/nova-team/nova-qnn/issues) for reproducible bugs and well-scoped feature requests.
+- For security or conduct-related concerns, email nova@example.com.
+
+Please be respectful and follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Documentation
 
@@ -290,6 +297,27 @@ Add examples to the `examples/` directory:
 - Use realistic but simple examples
 - Test examples to ensure they work
 
+## Release Process
+
+We follow [Semantic Versioning](https://semver.org). Releases are automated via GitHub Actions and published to PyPI.
+
+1. Update version in `pyproject.toml` (`[project].version`).
+2. Update `CHANGELOG.md` with a new section for the version.
+3. Commit and push changes on `master`/`main`.
+4. Create a signed tag and push it (format: `vX.Y.Z`):
+   ```bash
+   git tag -s vX.Y.Z -m "vX.Y.Z"
+   git push origin vX.Y.Z
+   ```
+5. The `Release` workflow will:
+   - Build sdist and wheel
+   - Publish to PyPI (requires `PYPI_API_TOKEN` repository secret)
+   - Create a GitHub Release with generated notes and attach artifacts
+
+Notes:
+- Ensure tests are green on CI before tagging.
+- Releases should reference the corresponding `CHANGELOG.md` entry.
+
 ## Development Workflow Summary
 
 1. **Setup**: Fork, clone, install dependencies
@@ -301,9 +329,17 @@ Add examples to the `examples/` directory:
 
 ## Getting Help
 
-- **Documentation**: Read the docs at [link]
-- **Issues**: Search and create GitHub issues
-- **Discussions**: Use GitHub Discussions for questions
-- **Chat**: Join our development chat [if available]
+- **Support Guide**: See [SUPPORT.md](SUPPORT.md)
+- **Code of Conduct**: See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- **Issues**: Search and create [GitHub Issues](https://github.com/nova-team/nova-qnn/issues)
+- **Discussions**: Participate in [GitHub Discussions](https://github.com/nova-team/nova-qnn/discussions)
+
+## Community Discussions
+
+We use [GitHub Discussions](https://github.com/nova-team/nova-qnn/discussions) for community Q&A, ideas, and design proposals. Before starting a new topic:
+- Search existing discussions and issues to avoid duplicates
+- Pick an appropriate category (Q&A, Ideas, Show & Tell)
+- Share minimal reproducible examples when asking technical questions
+- Be kind and inclusive; the [Code of Conduct](CODE_OF_CONDUCT.md) applies
 
 Thank you for contributing to NOVA! 🚀 

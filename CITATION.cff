@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "NOVA - Quantum Neural Network Framework"
+version: "0.1.0"
+date-released: "2025-08-07"
+license: "Apache-2.0"
+repository-code: "https://github.com/nova-team/nova-qnn"
+url: "https://github.com/nova-team/nova-qnn"
+abstract: "NOVA is a quantum neural network (VQE) framework for molecular energy estimation with multiple ansatz families, advanced optimizers, and portable hardware integration."
+authors:
+  - name: "NOVA Team"
+    email: "nova@example.com"
+    affiliation: "NOVA Project"
+# To add a DOI, mint one via Zenodo or a publisher and then include the line below without the leading '#':
+# doi: 10.5281/zenodo.TBD
+preferred-citation:
+  type: "software"
+  title: "NOVA - Quantum Neural Network Framework"
+  authors:
+    - name: "NOVA Team"
+      affiliation: "NOVA Project"
+  url: "https://github.com/nova-team/nova-qnn"
+  notes: "Please cite the DOI once available."

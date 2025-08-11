@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Q&A and discussions
+    url: https://github.com/nova-team/nova-qnn/discussions
+    about: Please ask and answer questions here.
+  - name: Security contact
+    url: mailto:nova@example.com
+    about: Please report security vulnerabilities via email.

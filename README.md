@@ -8,6 +8,34 @@
 
 A modern, professional Python package for **Quantum Neural Networks** focused on molecular energy estimation using variational quantum algorithms (VQAs).
 
+## Table of Contents
+
+- [Motivation](#motivation)
+- [Features](#features)
+- [Quick Start](#quick-start)
+- [Getting Started Guide](#getting-started-guide)
+- [Advanced Usage](#advanced-usage)
+- [Installation Options](#installation-options)
+- [Testing](#testing)
+- [Available Molecules and Ansatz Types](#available-molecules-and-ansatz-types)
+- [Community Discussions](#community-discussions)
+- [Challenges](#challenges)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Documentation and Support](#documentation-and-support)
+
+## 🧠 Motivation
+
+Modern quantum chemistry quickly becomes intractable on classical hardware as molecular size grows. NOVA exists to make hybrid quantum‑classical workflows practical for ground‑state energy estimation today, on both simulators and near‑term (noisy) quantum devices. It unifies three pillars under one consistent API:
+
+- Expressive, chemistry‑aware ansatz families for VQE‑style training
+- Robust classical optimizers designed for noisy, non‑convex landscapes
+- Portable hardware integration with transpilation and error‑mitigation
+
+The goal is to help researchers and practitioners prototype, compare, and deploy QNN/VQE approaches for molecular systems with reproducible results and hardware realism.
+
 ## ✨ Features
 
 - **🏗️ Modern Package Structure**: Professional src-layout with proper module organization
@@ -303,6 +331,41 @@ pytest --cov=nova --cov-report=html
 - **Nelder-Mead**: Simplex method
 - **Powell**: Powell's conjugate direction method
 
+## 💬 Community Discussions
+
+Join the conversation on [GitHub Discussions](https://github.com/nova-team/nova-qnn/discussions) to ask questions, propose ideas, and share results. Before posting, search existing topics to avoid duplicates. Please follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## 🚧 Challenges
+
+Implementing practical quantum neural networks for chemistry involves several real‑world challenges:
+
+- Noise and decoherence: Real hardware introduces gate and readout errors that bias energy estimates.
+- Barren plateaus: Gradients can vanish in deeper circuits, slowing or stalling training.
+- Limited shot budgets: Objective evaluations are expensive; sample efficiency is critical.
+- Hardware constraints: Device connectivity and native gate sets require careful transpilation and mapping.
+- Error mitigation overhead: Techniques like ZNE and readout mitigation improve accuracy but increase runtime.
+- Initialization sensitivity: Poor parameter initializations can trap optimization in bad regions.
+- Reproducibility: Results may vary across providers, backends, and noise models; consistent logging and seeds matter.
+- Scalability: Moving beyond small molecules requires smarter ansatz design and resource‑aware compilation.
+
+See `OPTIMIZER_GUIDE.md`, `CIRCUIT_TRANSPILER_GUIDE.md`, and `QUANTUM_HARDWARE_INTERFACE.md` for deeper discussion and mitigations.
+
+## 🗺️ Roadmap
+
+Planned enhancements aligned with the current architecture:
+
+- **Quantum hardware back‑ends**: Extend beyond Cirq/Qiskit to include IonQ, Rigetti and cloud providers via AWS Braket/Azure Quantum. Provide a unified hardware‑abstraction layer with backend selection via configuration file and environment variables. Improve device discovery and capability introspection.
+- **Automatic differentiation & hybrid models**: Integrate with PyTorch, TensorFlow and JAX to offer differentiable NOVA layers and parameter‑shift gradients for hybrid classical–quantum training. Ship examples and unit tests for end‑to‑end training.
+- **More molecular systems & Hamiltonians**: Add small organic molecules (e.g., BeH₂, CH₄) and expose a clean API to load custom Hamiltonians (OpenFermion/PySCF pathways), including active‑space helpers and geometry import.
+- **Additional ansatz families**: Implement periodic/plane‑wave or momentum‑space ansatz, ADAPT‑VQE, and machine‑learned ansätze compatible with the existing `create_ansatz` factory and transpiler.
+- **Noise‑aware optimisation**: Add Bayesian optimisation and SPSA/shot‑frugal gradient methods; first‑class utilities for shot‑averaging and batched evaluations; noise‑aware gradient descent building on existing noise‑aware optimizers.
+- **Visualization and analysis tools**: Provide modules and notebooks to visualise convergence metrics, energy landscapes, and circuit depth vs. accuracy, plus utilities to plot and compare optimisation trajectories across backends.
+- **Pre‑trained models and benchmarks**: Publish pre‑trained parameter sets for benchmark molecules/ansatz types and maintain reproducible benchmark suites; make results downloadable alongside `benchmark_results/` artifacts.
+- **Cross‑platform packaging**: Distribute conda packages (conda‑forge feedstock) in addition to PyPI; build wheels for common architectures (x86‑64, Apple Silicon).
+- **Containerisation**: Provide Docker images (e.g., `ghcr.io/nova-team/nova-qnn`) with optional extras for tutorials, CI and cloud runs.
+- **User interface enhancements**: Expand PyQt5 GUI with interactive circuit visualisation, parameter sliders and real‑time convergence plots; offer an optional web‑based GUI (Streamlit) for zero‑install usage.
+- **Datasets and ML pipelines**: Introduce datasets and training pipelines for classification/regression tasks using hybrid models, beyond molecular energy estimation.
+
 ## 🤝 Contributing
 
 We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
@@ -325,13 +388,18 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 - Me 
 - Built on top of [Cirq](https://quantumai.google/cirq) and [OpenFermion](https://quantumai.google/openfermion)
 - Inspired by my quantum machine learning research and general interest
-- Thanks to all contributors and the quantum computing community (Goated fr fr)
+- Thanks to all contributors and the quantum computing community
 
 ## 📚 Documentation and Support
 
-- **Documentation**: [Coming soon]
+- **Documentation**: [NOVA Documentation on Read the Docs](https://nova-qnn.readthedocs.io)
+- **FAQ**: See the [FAQ](https://nova-qnn.readthedocs.io/en/latest/faq.html)
 - **Issues**: [GitHub Issues](https://github.com/nova-team/nova-qnn/issues) [Coming Soon]
 - **Discussions**: [GitHub Discussions](https://github.com/nova-team/nova-qnn/discussions) [Coming Soon]
+- **Releases**: [GitHub Releases](https://github.com/nova-team/nova-qnn/releases)
+- **Code of Conduct**: See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- **Support**: See [SUPPORT.md](SUPPORT.md)
+- **Citation**: See [CITATION.cff](CITATION.cff)
 
 ---
 
