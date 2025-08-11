@@ -26,8 +26,8 @@ from scipy.optimize import minimize
 # Set up logging
 logger = logging.getLogger(__name__)
 
-# Import the new ansatz circuits
-from nova.ansatz.ansatz_circuits import create_ansatz
+# Import the new ansatz circuits (kept near top-level imports)
+from nova.ansatz.ansatz_circuits import create_ansatz  # noqa: E402
 
 # Import the consolidated hardware and optimization modules
 try:
@@ -78,8 +78,7 @@ except ImportError as e:
 
     enhanced_default_provider = None
 
-# Import the quantum hardware error handling module
-from nova.hardware.quantum_error_handling import QuantumHardwareError
+from nova.hardware.quantum_error_handling import QuantumHardwareError  # noqa: E402
 
 # Import optional advanced components (handle ImportErrors)
 PYSCF_AVAILABLE = False
@@ -445,16 +444,15 @@ class MolecularQNN:
                 ]
             elif self.molecule == "ch4":
                 # Tetrahedral CH4 geometry (Angstroms), example bond length
-                l = 1.087
-                h = l * np.sqrt(8.0 / 9.0)
-                r = l * np.sqrt(2.0 / 9.0)
+                bond_len = 1.087
+                r = bond_len * np.sqrt(2.0 / 9.0)
                 phi = 2.0 * np.pi / 3.0
                 return [
                     ("C", (0, 0, 0)),
-                    ("H", (0, 0, l)),
-                    ("H", (r * np.cos(0 * phi), r * np.sin(0 * phi), -l / 3)),
-                    ("H", (r * np.cos(1 * phi), r * np.sin(1 * phi), -l / 3)),
-                    ("H", (r * np.cos(2 * phi), r * np.sin(2 * phi), -l / 3)),
+                    ("H", (0, 0, bond_len)),
+                    ("H", (r * np.cos(0 * phi), r * np.sin(0 * phi), -bond_len / 3)),
+                    ("H", (r * np.cos(1 * phi), r * np.sin(1 * phi), -bond_len / 3)),
+                    ("H", (r * np.cos(2 * phi), r * np.sin(2 * phi), -bond_len / 3)),
                 ]
             else:
                 return None
@@ -536,7 +534,7 @@ class MolecularQNN:
                 hamiltonian_terms = []
                 if hasattr(self.hamiltonian, "terms"):
                     # OpenFermion QubitOperator
-                    for term, coeff in self.hamiltonian.terms.items():
+                    for term, _coeff in self.hamiltonian.terms.items():
                         if term:  # Skip identity term
                             pauli_string = cirq.PauliString()
                             for qubit_idx, pauli in term:
@@ -574,10 +572,7 @@ class MolecularQNN:
         self.circuit = self.ansatz_circuit.build_circuit()
 
         # Get parameter symbols
-        self.symbols = sorted(
-            [s for s in cirq.parameter_names(self.circuit)],
-            key=lambda x: int(x.replace("θ_", "")),
-        )
+        self.symbols = sorted(cirq.parameter_names(self.circuit), key=lambda x: int(x.replace("θ_", "")))
 
         self.logger.info(f"Ansatz initialized with {len(self.symbols)} parameters")
 
@@ -1043,7 +1038,7 @@ class MolecularQNN:
     def compare_ansatz_types(
         self,
         iterations=50,
-        methods=["hardware_efficient", "ucc", "chea", "hva"],
+        methods=None,
         save_path=None,
         callback=None,
         hardware_backend=None,
@@ -1066,6 +1061,8 @@ class MolecularQNN:
             results: Dictionary containing the results for each method
             fig: Matplotlib figure showing the convergence of each method
         """
+        if methods is None:
+            methods = ["hardware_efficient", "ucc", "chea", "hva"]
         comparison_results = {}
         if self.exact_energy is not None:
             comparison_results["exact_energy"] = self.exact_energy
@@ -1084,7 +1081,7 @@ class MolecularQNN:
         # Compare each method
         for method in methods:
             print(f"\n--- Testing Ansatz Type: {method} ---")
-            method_start_time = time.time()
+            _method_start_time = time.time()
             method_results = {
                 "param_count": 0,
                 "error": None,
@@ -1109,9 +1106,9 @@ class MolecularQNN:
                 method_results["param_count"] = temp_qnn.param_count
 
                 # Define callback for this specific method
-                def method_specific_callback(progress_info):
+                def method_specific_callback(progress_info, _method=method):
                     if callback:
-                        progress_info["method"] = method  # Add method name to info
+                        progress_info["method"] = _method  # Add method name to info
                         callback(progress_info)
 
                 # Train the temporary QNN instance
@@ -1259,7 +1256,7 @@ class MolecularQNN:
         try:
             # Load the saved data
             with open(filepath, "rb") as f:
-                save_data = pickle.load(f)
+                save_data = pickle.load(f)  # noqa: S301
             print(f"Model data loaded from {filepath}")
 
             # Create a new QNN instance using saved configuration

@@ -218,7 +218,7 @@ class EnhancedReadoutErrorMitigation(ErrorMitigationStrategy):
                     )
 
                     # Process results to build confusion matrix
-                    for result_key, result_vals in results.items():
+                    for _result_key, result_vals in results.items():
                         # Count occurrences of each outcome
                         counts = {}
                         for result in result_vals:
@@ -261,7 +261,7 @@ class EnhancedReadoutErrorMitigation(ErrorMitigationStrategy):
                         )
 
                         # Process results
-                        for result_key, result_vals in results.items():
+                        for _result_key, result_vals in results.items():
                             # Count occurrences
                             counts = {}
                             for result in result_vals:
@@ -520,7 +520,7 @@ class EnhancedReadoutErrorMitigation(ErrorMitigationStrategy):
                 binary_array = np.array([int(b) for b in binary])
 
                 # Fill in the mitigated values
-                for i in range(count):
+                for _i in range(count):
                     if count_idx < len(mitigated_vals):
                         if len(binary_array) < len(mitigated_vals[count_idx]):
                             # Pad if needed
@@ -595,7 +595,7 @@ class DynamicalDecouplingMitigation(ErrorMitigationStrategy):
             # Process circuit moments
             for moment_idx, moment in enumerate(circuit):
                 # Get qubits that have operations in this moment
-                active_qubits = set(q for op in moment for q in op.qubits)
+                active_qubits = {q for op in moment for q in op.qubits}
 
                 # For each qubit, check if it's been idle
                 for qubit in qubits:

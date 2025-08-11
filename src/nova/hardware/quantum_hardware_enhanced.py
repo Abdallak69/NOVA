@@ -526,7 +526,7 @@ class EnhancedExecutionResult:
             # Use first key in results that is not 'metadata'
             available_keys = [
                 k
-                for k in self.raw_results.keys()
+                for k in self.raw_results
                 if k != "metadata" and isinstance(self.raw_results.get(k), np.ndarray)
             ]
             if not available_keys:
@@ -604,7 +604,8 @@ class EnhancedExecutionResult:
                     parity = 1
                     for qubit, pauli_op in term.items():
                         bit_index = qubit_indices.get(qubit)
-                        if bit_index is None: continue
+                        if bit_index is None:
+                            continue
 
                         bit_value = int(bitstring[bit_index])
                         if pauli_op == cirq.Z:

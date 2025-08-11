@@ -22,8 +22,8 @@ import numpy as np
 
 # Conditionally import Qiskit
 try:
-    import qiskit
-    from qiskit import transpile as qiskit_transpile
+    import qiskit  # noqa: F401
+    from qiskit import transpile as qiskit_transpile  # noqa: F401
 
     QISKIT_AVAILABLE = True
 except ImportError:
@@ -38,7 +38,6 @@ try:
     from nova.transpiler.quantum_circuit_transpiler import (
         CircuitTranspiler,
         OptimizationLevel,
-        create_circuit_transpiler,
     )
 
     HARDWARE_INTERFACE_AVAILABLE = True
@@ -239,7 +238,7 @@ class HardwareBenchmark:
         for hw_name, hw_results in self.results.items():
             comparison[hw_name] = []
 
-            for circuit_name, metrics in hw_results.items():
+            for _circuit_name, metrics in hw_results.items():
                 if metric in metrics:
                     comparison[hw_name].append(metrics[metric])
                 else:
@@ -407,7 +406,7 @@ class HardwareVisualizer:
         node_colors = []
         if single_qubit_errors:
             vmin = min(single_qubit_errors.values()) if single_qubit_errors else 0
-            vmax = max(single_qubit_errors.values()) if single_qubit_errors else 1
+            _vmax = max(single_qubit_errors.values()) if single_qubit_errors else 1
 
             for node in G.nodes():
                 error = single_qubit_errors.get(node, vmin)
@@ -421,8 +420,8 @@ class HardwareVisualizer:
         nodes = nx.draw_networkx_nodes(
             G, pos, node_color=node_colors, cmap=plt.cm.RdYlGn_r, node_size=500
         )
-        edges = nx.draw_networkx_edges(G, pos, width=1.5, alpha=0.7)
-        labels = nx.draw_networkx_labels(G, pos, font_size=10)
+        nx.draw_networkx_edges(G, pos, width=1.5, alpha=0.7)
+        nx.draw_networkx_labels(G, pos, font_size=10)
 
         # Add a colorbar if we have error data
         if isinstance(node_colors, list) and len(node_colors) > 0:
@@ -504,11 +503,11 @@ class HardwareVisualizer:
             if num_qubits == 0:
                 # Try to infer from error data
                 all_qubits = set()
-                for pair in errors.keys():
-                    if isinstance(pair, tuple) and len(pair) == 2:
-                        all_qubits.add(pair[0])
-                        all_qubits.add(pair[1])
-                num_qubits = max(all_qubits) + 1 if all_qubits else 0
+            for pair in errors:
+                if isinstance(pair, tuple) and len(pair) == 2:
+                    all_qubits.add(pair[0])
+                    all_qubits.add(pair[1])
+            num_qubits = max(all_qubits) + 1 if all_qubits else 0
 
             if num_qubits == 0:
                 logger.warning("Could not determine number of qubits.")

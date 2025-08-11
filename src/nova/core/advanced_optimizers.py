@@ -94,7 +94,7 @@ class QuantumOptimizer:
             filepath: Path to load the history from
         """
         with open(filepath, "rb") as f:
-            self.history = pickle.load(f)
+            self.history = pickle.load(f)  # noqa: S301
 
         # Update best parameters and value
         if self.history["values"]:
@@ -183,8 +183,7 @@ class NoiseAwareOptimizer(QuantumOptimizer):
         # Update iteration count
         self.iterations += 1
 
-        # Evaluate objective
-        current_time = time.time() - self.start_time
+        # Evaluate objective (elapsed time computed via history timestamps)
 
         # Check if we should increase shots
         if self.shot_phase < len(self.shots_schedule) - 1:
@@ -240,7 +239,8 @@ class NoiseAwareOptimizer(QuantumOptimizer):
             return value
 
         # Create wrapper for callback
-        wrapped_callback = lambda params: self._callback_wrapper(callback, params)
+        def wrapped_callback(params):  # noqa: D401
+            return self._callback_wrapper(callback, params)
 
         # Run the optimization
         max_iterations = kwargs.pop("max_iterations", 100)
@@ -534,7 +534,6 @@ class AdaptiveOptimizer(QuantumOptimizer):
                     options=phase_options,
                 )
                 current_params = result.x
-                phase_success = result.success
 
             elif current_method == "Nelder-Mead":
                 # Nelder-Mead with adaptive simplex
@@ -545,7 +544,6 @@ class AdaptiveOptimizer(QuantumOptimizer):
                     options={**phase_options, "adaptive": True},
                 )
                 current_params = result.x
-                phase_success = result.success
 
             elif current_method == "differential_evolution":
                 # Differential evolution needs bounds
@@ -559,7 +557,6 @@ class AdaptiveOptimizer(QuantumOptimizer):
                     init="latinhypercube",
                 )
                 current_params = result.x
-                phase_success = result.success
 
             else:
                 # Fall back to simple gradient descent for unknown methods
@@ -582,7 +579,7 @@ class AdaptiveOptimizer(QuantumOptimizer):
                     params -= lr * grad
 
                 current_params = params
-                phase_success = True
+                # Phase success status tracked by result.success if needed
 
             # Update iterations count
             self.iterations += phase_iterations

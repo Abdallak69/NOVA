@@ -147,9 +147,9 @@ class HardwareEfficientAnsatz(AnsatzCircuit):
         param_idx = 0
 
         # Create layers of rotations and entanglement
-        for layer in range(self.depth):
+        for _layer in range(self.depth):
             # Rotation layer
-            for q_idx, qubit in enumerate(self.qubits):
+            for _q_idx, qubit in enumerate(self.qubits):
                 for gate in self.rotation_gates:
                     param = sympy.Symbol(f"θ_{param_idx}")
                     self.parameters.append(param)
@@ -168,7 +168,7 @@ class HardwareEfficientAnsatz(AnsatzCircuit):
 
         # Final rotation layer (optional)
         if not self.skip_final_rotation_layer:
-            for q_idx, qubit in enumerate(self.qubits):
+            for _q_idx, qubit in enumerate(self.qubits):
                 for gate in self.rotation_gates:
                     param = sympy.Symbol(f"θ_{param_idx}")
                     self.parameters.append(param)
@@ -388,9 +388,9 @@ class CHEAnsatz(AnsatzCircuit):
         param_idx = 0
 
         # Create layers of rotations and entanglement
-        for layer in range(self.depth):
+        for _layer in range(self.depth):
             # Full rotation layer (Rx, Ry, Rz on each qubit)
-            for q_idx, qubit in enumerate(self.qubits):
+            for _q_idx, qubit in enumerate(self.qubits):
                 # Apply all three rotation gates for maximum flexibility
                 for gate_type in ["X", "Y", "Z"]:
                     param = sympy.Symbol(f"θ_{param_idx}")
@@ -420,7 +420,7 @@ class CHEAnsatz(AnsatzCircuit):
 
         # Final rotation layer (optional)
         if not self.skip_final_rotation_layer:
-            for q_idx, qubit in enumerate(self.qubits):
+            for _q_idx, qubit in enumerate(self.qubits):
                 for gate_type in ["X", "Y", "Z"]:
                     param = sympy.Symbol(f"θ_{param_idx}")
                     self.parameters.append(param)
@@ -487,7 +487,7 @@ class SymmetryPreservingAnsatz(AnsatzCircuit):
                 circuit.append(cirq.H(self.qubits[i]))
 
         # Apply symmetry-preserving blocks
-        for layer in range(self.depth):
+        for _layer in range(self.depth):
             # Apply particle-number-conserving operations
             if self.conserve_particle_number:
                 # These operations exchange particles but maintain the total count
@@ -506,7 +506,7 @@ class SymmetryPreservingAnsatz(AnsatzCircuit):
                         circuit.append(cirq.CNOT(self.qubits[i], self.qubits[j]))
             else:
                 # Without particle number conservation, we can use general rotations
-                for i, qubit in enumerate(self.qubits):
+                for _i, qubit in enumerate(self.qubits):
                     for axis in ["X", "Y", "Z"]:
                         param = sympy.Symbol(f"θ_{param_idx}")
                         self.parameters.append(param)
@@ -589,7 +589,7 @@ class HamiltonianVariationalAnsatz(AnsatzCircuit):
 
         # Apply layers of Hamiltonian evolution
         param_idx = 0
-        for layer in range(self.depth):
+        for _layer in range(self.depth):
             # Apply evolution under each Hamiltonian term
             for term in self.hamiltonian_terms:
                 param = sympy.Symbol(f"θ_{param_idx}")

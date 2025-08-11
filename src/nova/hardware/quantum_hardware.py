@@ -265,7 +265,7 @@ class QiskitIBMBackend(QuantumBackend):
             IBMQ.load_account()
             provider = IBMQ.get_provider()
             self.backend = provider.get_backend(device_name)
-        except:
+        except Exception:
             # Fallback to simulator if no account or connection issues
             from qiskit import Aer
 
@@ -316,7 +316,7 @@ class QiskitIBMBackend(QuantumBackend):
                 elif isinstance(op.gate, cirq.CXPowGate) and op.gate.exponent == 1:
                     qiskit_circuit.cx(qiskit_qubits[0], qiskit_qubits[1])
                 elif isinstance(op.gate, cirq.MeasurementGate):
-                    for i, q in enumerate(qiskit_qubits):
+                    for _i, q in enumerate(qiskit_qubits):
                         qiskit_circuit.measure(q, q)
                 elif isinstance(op.gate, cirq.XPowGate):
                     # Rx gate with parameter
@@ -497,7 +497,7 @@ class ReadoutErrorMitigation(ErrorMitigationStrategy):
 
             # Process results to build calibration matrix
             # This is a simplified version
-            for result_key, result_vals in results.items():
+            for _result_key, result_vals in results.items():
                 counts = {}
                 for result in result_vals:
                     # Convert result to integer
@@ -688,7 +688,7 @@ class CircuitKnittingStrategy(ErrorMitigationStrategy):
                     combined_results[key] = np.zeros((n_shots, n_qubits), dtype=np.int8)
 
                 # Fill in results for this subcircuit
-                for q, (sc_idx, q_idx) in qubit_mapping.items():
+                for _q, (sc_idx, q_idx) in qubit_mapping.items():
                     if sc_idx == subcircuit_idx and key in subcircuit_results:
                         combined_results[key][:, q_idx] = subcircuit_results[key][
                             :, q_idx
@@ -944,7 +944,7 @@ def expectation_with_hardware(
             for shot in measurements:
                 # For each qubit in the Pauli string, check if it's measured as 1
                 parity = 1.0
-                for qubit, gate in pauli_string.items():
+                for qubit, _gate in pauli_string.items():
                     # Find index of the qubit in the sorted list
                     idx = qubits.index(qubit)
                     if idx < len(shot) and shot[idx] == 1:

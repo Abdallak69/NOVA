@@ -12,9 +12,7 @@ import matplotlib.pyplot as plt
 from tabulate import tabulate
 
 try:
-    from nova.core.advanced_optimizers import create_optimizer
     from nova.core.qnn_molecular_energy import MolecularQNN
-    from nova.hardware.quantum_hardware import QuantumHardwareProvider
     DEPENDENCIES_AVAILABLE = True
 except ImportError as e:
     click.echo(f"Warning: Some dependencies not available: {e}", err=True)
@@ -67,6 +65,7 @@ def train(ctx, molecule, bond_length, depth, ansatz, iterations, method,
         click.echo("Error: Required dependencies not available", err=True)
         sys.exit(1)
 
+    # Access verbose flag
     verbose = ctx.obj.get('verbose', False)
 
     # Set default bond lengths
@@ -200,7 +199,7 @@ def compare(ctx, molecule, bond_length, depth, ansatze, iterations, save):
         click.echo("Error: Required dependencies not available", err=True)
         sys.exit(1)
 
-    verbose = ctx.obj.get('verbose', False)
+    _ = ctx.obj.get('verbose', False)
 
     # Set default bond length
     if bond_length is None:
@@ -348,15 +347,9 @@ def compare_gui():
 def test():
     """Run the test suite."""
     try:
-        import subprocess
-        result = subprocess.run([sys.executable, "-m", "pytest", "tests/"],
-                              capture_output=True, text=True)
-
-        click.echo(result.stdout)
-        if result.stderr:
-            click.echo(result.stderr, err=True)
-
-        sys.exit(result.returncode)
+        import pytest
+        exit_code = pytest.main(["-q", "tests/"])
+        sys.exit(exit_code)
 
     except FileNotFoundError:
         click.echo("pytest not found. Install with: pip install pytest", err=True)

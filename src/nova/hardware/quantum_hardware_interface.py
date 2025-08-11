@@ -396,7 +396,7 @@ class CirqSimulatorBackend(QuantumBackend):
 QISKIT_AVAILABLE = False  # Initialize to False
 try:
     # Try importing a specific Qiskit backend class if needed for the check
-    from qiskit_aer import AerSimulator
+    from qiskit_aer import AerSimulator  # noqa: F401
     QISKIT_AVAILABLE = True
 except ImportError:
     # QISKIT_AVAILABLE remains False

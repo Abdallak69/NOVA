@@ -114,6 +114,8 @@ extend-exclude = [
     "test_logs",
     "qnn_env",
     "scripts",
+    "tests",
+    "examples",
 ]
 
 [tool.ruff.lint]
@@ -141,9 +143,8 @@ ignore = [
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"test_*.py" = ["S101", "B011", "T201"]
-"*test*.py" = ["S101", "B011", "T201"]
-"examples/*.py" = ["T201", "S101"]
+"tests/**/*.py" = ["I001", "F401", "W291", "W293", "S101", "B011", "T201"]
+"examples/**/*.py" = ["T201", "S101", "F401"]
 "scripts/*.py" = ["T201", "S101"]
 
 [tool.ruff.lint.isort]
@@ -173,7 +174,7 @@ filterwarnings = [
 
 # MyPy configuration
 [tool.mypy]
-python_version = "3.8"
+python_version = "3.11"
 mypy_path = "src"
 packages = ["nova"]
 strict = false

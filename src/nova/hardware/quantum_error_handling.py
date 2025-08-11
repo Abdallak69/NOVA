@@ -487,8 +487,7 @@ def validate_quantum_circuit(
         qubits = list(circuit.all_qubits())
 
         # Check number of qubits against backend limit
-        if hasattr(backend, "max_qubits"):
-            if len(qubits) > backend.max_qubits:
+        if hasattr(backend, "max_qubits") and len(qubits) > backend.max_qubits:
                 return (
                     False,
                     f"Circuit uses {len(qubits)} qubits, but backend supports at most {backend.max_qubits}",
@@ -594,7 +593,7 @@ def check_backend_health(backend: Any) -> Dict[str, Any]:
             )
 
             if hasattr(backend, "run_circuit"):
-                result = backend.run_circuit(test_circuit, repetitions=10)
+                _ = backend.run_circuit(test_circuit, repetitions=10)
                 health_data["available"] = True
                 health_data["status"] = "online"
 
@@ -945,10 +944,10 @@ def user_friendly_error_message(error: Exception) -> str:
     if isinstance(error, TypeError):
         return f"Type error: {error_message}"
 
-    if isinstance(error, ConnectionError) or isinstance(error, socket.error):
+    if isinstance(error, (ConnectionError, socket.error)):
         return "Connection error: Failed to connect to quantum hardware. Check your internet connection."
 
-    if isinstance(error, TimeoutError) or isinstance(error, socket.timeout):
+    if isinstance(error, (TimeoutError, socket.timeout)):
         return (
             "Timeout error: The operation took too long to complete. Try again later."
         )

@@ -59,7 +59,7 @@ class MplCanvas(FigureCanvas):
         """
         self.fig = Figure(figsize=(width, height), dpi=dpi)
         self.axes = self.fig.add_subplot(111)
-        super(MplCanvas, self).__init__(self.fig)
+        super().__init__(self.fig)
 
 
 class TrainingThread(QThread):
@@ -674,8 +674,7 @@ class QNNApp(QMainWindow):
 
             # Draw circuit using matplotlib
             try:
-                import cirq
-                from cirq.contrib.svg import SVGCircuit
+                import cirq  # noqa: F401
 
                 # For now, just show a text representation in the plot
                 self.circuit_canvas.axes.text(

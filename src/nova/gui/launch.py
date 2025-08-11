@@ -10,7 +10,7 @@ import sys
 import click
 
 try:
-    from PyQt5.QtWidgets import QApplication
+    from PyQt5.QtWidgets import QApplication  # noqa: F401
     PYQT_AVAILABLE = True
 except ImportError:
     PYQT_AVAILABLE = False
@@ -165,7 +165,8 @@ def launch_launcher_gui():
                         launch_compare_gui()
                     elif selected == 2:  # CLI
                         import subprocess
-                        subprocess.Popen([sys.executable, "-m", "nova.cli"])
+                        # Using a fixed argument list without shell to avoid shell injection concerns
+                        subprocess.Popen([sys.executable, "-m", "nova.cli"], shell=False)  # noqa: S603
 
                 except Exception as e:
                     QMessageBox.critical(self, "Error", f"Failed to launch: {e}")

@@ -39,14 +39,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 # Import the QNN module
 try:
-    from nova.ansatz.ansatz_circuits import (
-        CHEAnsatz,
-        HamiltonianVariationalAnsatz,
-        HardwareEfficientAnsatz,
-        SymmetryPreservingAnsatz,
-        UCCAnsatz,
-        create_ansatz,
-    )
+    from nova.ansatz.ansatz_circuits import create_ansatz
     from nova.core.qnn_molecular_energy import MolecularQNN
 
     print("Successfully imported QNN modules")
@@ -61,7 +54,7 @@ class MplCanvas(FigureCanvasQTAgg):
     def __init__(self, parent=None, width=5, height=4, dpi=100):
         self.fig = Figure(figsize=(width, height), dpi=dpi)
         self.axes = self.fig.add_subplot(111)
-        super(MplCanvas, self).__init__(self.fig)
+        super().__init__(self.fig)
 
 
 class TrainingThread(QThread):
@@ -404,7 +397,7 @@ class AnsatzComparisonGUI(QMainWindow):
 
         # Update circuit details selector
         self.circuit_selector.clear()
-        for method in results.keys():
+        for method in results:
             if method != "exact_energy":
                 self.circuit_selector.addItem(
                     self.method_names.get(method, method), method
@@ -617,7 +610,7 @@ class AnsatzComparisonGUI(QMainWindow):
 def main():
     """Main function to run the GUI."""
     app = QApplication(sys.argv)
-    window = AnsatzComparisonGUI()
+    _ = AnsatzComparisonGUI()
     sys.exit(app.exec_())
 
 

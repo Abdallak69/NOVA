@@ -16,16 +16,22 @@ import time
 from enum import Enum
 from typing import Any, Dict, List, Optional, Union
 
+import cirq
+
+# Import our quantum hardware interface
+from nova.hardware.quantum_hardware_interface import (
+    QuantumBackend as QuantumHardwareInterface,
+    hardware_manager,
+)
+
 # Set up logging
 logger = logging.getLogger(__name__)
-
-import cirq
 
 # Conditionally import Qiskit
 try:
     import qiskit
     from qiskit import transpile as qiskit_transpile
-    from qiskit.transpiler import PassManager
+    from qiskit.transpiler import PassManager  # noqa: F401
 
     QISKIT_AVAILABLE = True
 
@@ -41,11 +47,6 @@ except ImportError:
     QISKIT_AVAILABLE = False
     QISKIT_PULSE_AVAILABLE = False
 
-# Import our quantum hardware interface
-from nova.hardware.quantum_hardware_interface import (
-    QuantumBackend as QuantumHardwareInterface,
-    hardware_manager,
-)
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -489,7 +490,7 @@ class CircuitTranspiler:
 
         # Get qubit error rates if available
         qubit_errors = error_rates.get("single_qubit", {})
-        two_qubit_errors = error_rates.get("two_qubit", {})
+        _two_qubit_errors = error_rates.get("two_qubit", {})
 
         # Example optimization: minimize usage of high-error qubits
         if qubit_errors and connectivity:
@@ -630,7 +631,7 @@ def create_circuit_transpiler(
                 # Try to get a default backend - use cirq_simulator as fallback
                 try:
                     interface = hardware_manager.get_backend("cirq_simulator")
-                except:
+                except Exception:
                     interface = None
         else:
             # Fallback to None (will use default behavior)
